@@ -1,0 +1,92 @@
+//
+//
+// Tencent is pleased to support the open source community by making tRPC available.
+//
+// Copyright (C) 2023 THL A29 Limited, a Tencent company.
+// All rights reserved.
+//
+// If you have downloaded a copy of the tRPC source code from Tencent,
+// please note that tRPC source code is licensed under the  Apache 2.0 License,
+// A copy of the Apache 2.0 License is included in this file.
+//
+//
+
+syntax = "proto3";
+
+package opentelemetry.ext.proto.sampler;
+
+option go_package = "trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler";
+
+message KeyValues {
+  string key = 1;
+  repeated string values = 2;
+}
+
+message KeyValue {
+  string key     = 1;
+  string value   = 2;
+  bool   sampled = 3;
+  int64  deadline = 4;
+  string comment  = 5;
+}
+
+message SetSamplerRequest {
+  repeated KeyValues attributes = 1;
+}
+
+message SetSamplerResponse {
+
+}
+
+message SetSamplerV2Request {
+  repeated KeyValue attributes = 1;
+}
+
+message SetSamplerV2Response {
+
+}
+
+message GetSamplerRequest {
+
+}
+
+message GetSamplerResponse {
+  repeated KeyValues attributes = 1;
+}
+
+message GetSamplerV2Request {
+
+}
+
+message GetSamplerV2Response {
+  repeated KeyValue attributes = 1;
+}
+
+message DelSamplerRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message DelSamplerResponse {
+
+}
+
+message JudgeSamplerRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message JudgeSamplerResponse {
+  bool  sampled = 1;
+  int64 deadline = 2;
+}
+
+
+service SamplerService {
+  rpc SetSampler(SetSamplerRequest) returns (SetSamplerResponse);
+  rpc GetSampler(GetSamplerRequest) returns (GetSamplerResponse);
+  rpc DelSampler(DelSamplerRequest) returns (DelSamplerResponse);
+  rpc JudgeSampler(JudgeSamplerRequest) returns (JudgeSamplerResponse);
+  rpc SetSamplerV2(SetSamplerV2Request) returns (SetSamplerV2Response);
+  rpc GetSamplerV2(GetSamplerV2Request) returns (GetSamplerV2Response);
+}

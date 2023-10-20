@@ -1,0 +1,90 @@
+global:                             #global config
+  namespace: Development
+  env_name: test
+
+server:
+  app: test
+  server: helloworld
+  bin_path: /usr/local/trpc/bin/
+  conf_path: /usr/local/trpc/conf/
+  data_path: /usr/local/trpc/data/
+  filter:
+    - opentelemetry
+  admin:
+    ip: 127.0.0.1
+    port: 9999
+    read_timeout: 3000   #ms.
+    write_timeout: 60000 #ms.
+  service:
+    - name: trpc.test.helloworld.Greeter1
+      ip: 127.0.0.1
+      port: 8000
+      network: tcp                                 #tcp udp
+      protocol: trpc                               #trpc http
+      timeout: 2000                                #ms
+    - name: trpc.test.helloworld.Greeter2
+      ip: 127.0.0.1
+      port: 8080
+      network: tcp                                 #tcp udp
+      protocol: http                               #trpc http
+      timeout: 2000                                #ms
+
+client:                                            #client config
+  timeout: 2000                                    #for all clients
+  namespace: Development
+  filter:
+    - opentelemetry
+  service:
+    - callee: trpc.test.helloworld.Greeter
+      name: trpc.test.helloworld.Greeter1
+      target: ip://127.0.0.1:8000
+      network: tcp                                 #tcp udp
+      protocol: trpc                               #trpc http
+      timeout: 1500
+      serialization: 0                             #0-pb 1-jce 2-json 3-flatbuffer
+
+plugins:                                          #plugins config
+  log:                                            #log config
+    default:                                      #default log config, support multiple log configuration
+      - writer: console                           #console
+        level: debug                              #log level
+  telemetry:
+    opentelemetry:
+      addr: 127.0.0.1:12520 # opentelemetry collector address
+      tenant_id: default
+      attributes:
+        - key: token1
+          value: 1
+      sampler:
+        fraction: 1
+        sampler_server_addr: 127.0.0.1:14941
+      metrics:
+        enable_register: false
+        registry_endpoints: []
+        server_owner: ""
+        codes:
+          - code: 21
+            type: timeout
+            description: server超时
+          - code: 101
+            type: timeout
+            description: client超时
+          - code: 100014
+            type: success
+            description: desc4
+          - code: 100015
+            type: exception
+            description: desc5
+            service:
+            method:
+      logs:
+        trace_log_mode: verbose
+        enabled: true
+        level: "DEBUG"
+        enable_sampler: true
+      traces:
+        disable_trace_body: false
+        enable_deferred_sample: true
+        deferred_sample_error: true
+        deferred_sample_slow_duration: 500ms
+        enable_zpage: true

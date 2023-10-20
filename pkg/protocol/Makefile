@@ -1,0 +1,3 @@
+precommit:
+	./genproto.sh
+	go build ./...

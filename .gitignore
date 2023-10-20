@@ -1,0 +1,13 @@
+.DS_Store
+/.idea
+/.vscode
+/vendor
+/example/basic/basic
+/example/log/log
+/example/stdout/remote/remote
+/example/stdout/std/std
+/example/asyncexporterlog/aysncexporterlog
+/example/trace/trace
+/oteltrpc/example/greeter/greeter
+go.work
+go.work.sum

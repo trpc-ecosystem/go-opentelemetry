@@ -1,0 +1,9 @@
+type: google.api.Service
+config_version: 3
+http:
+ rules:
+ - selector: opentelemetry.ext.proto.operation.OperationService.SetOperation
+   post: /api/operation
+   body: "*"
+ - selector: opentelemetry.ext.proto.operation.OperationService.GetOperation
+   get: /api/operation/tenant/{tenant}/app/{app}/server/{server}

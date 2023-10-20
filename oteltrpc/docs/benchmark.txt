@@ -1,0 +1,71 @@
+goos: darwin
+goarch: arm64
+pkg: trpc-system/go-opentelemetry/oteltrpc/logs
+BenchmarkSpanLogf10-10          	27176132	       221.1 ns/op	     184 B/op	       4 allocs/op
+BenchmarkSpanLogf1000-10        	 5548359	      1109 ns/op	    2217 B/op	       5 allocs/op
+BenchmarkSpanLogf100000-10      	   78422	     76683 ns/op	  319966 B/op	       7 allocs/op
+BenchmarkSpanLogf10000000-10    	     927	   5990899 ns/op	30008967 B/op	       9 allocs/op
+PASS
+ok  	trpc-system/go-opentelemetry/oteltrpc/logs	27.235s
+goos: darwin
+goarch: arm64
+pkg: trpc-system/go-opentelemetry/oteltrpc/metrics/prometheus
+BenchmarkSetGauge1010-10                      	19906334	       293.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSetGauge2020-10                      	 6858799	       876.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSetGauge100100-10                    	  396932	     14661 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSetGauge10001000-10                  	    4299	   1359137 ns/op	     286 B/op	       0 allocs/op
+BenchmarkIncrCounter1010-10                   	20825186	       287.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkIncrCounter2020-10                   	 6856326	       876.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkIncrCounter100100-10                 	  412269	     14677 ns/op	       0 B/op	       0 allocs/op
+BenchmarkIncrCounter10001000-10               	    4296	   1357485 ns/op	     286 B/op	       0 allocs/op
+BenchmarkObserveHistogram1010-10              	15535359	       385.9 ns/op	      64 B/op	       2 allocs/op
+BenchmarkObserveHistogram2020-10              	 6301273	       953.3 ns/op	      64 B/op	       2 allocs/op
+BenchmarkObserveHistogram100100-10            	  408507	     14557 ns/op	      64 B/op	       2 allocs/op
+BenchmarkObserveHistogram10001000-10          	    4302	   1357651 ns/op	     350 B/op	       2 allocs/op
+BenchmarkServerFilter-10                      	 7032949	       857.0 ns/op	     512 B/op	       4 allocs/op
+BenchmarkClientFilter-10                      	 6301809	       952.4 ns/op	     512 B/op	       4 allocs/op
+BenchmarkServerFilterWithSpanSampled-10       	2022/05/18 10:32:04 the client is shutdown
+2022/05/18 10:32:04 the client is shutdown
+2022/05/18 10:32:04 the client is shutdown
+2022/05/18 10:32:04 the client is shutdown
+ 3158055	      1944 ns/op	    1992 B/op	      25 allocs/op
+BenchmarkClientFilterWithSpanSampled-10       	2022/05/18 10:32:11 the client is shutdown
+2022/05/18 10:32:12 the client is shutdown
+2022/05/18 10:32:12 the client is shutdown
+2022/05/18 10:32:12 the client is shutdown
+2022/05/18 10:32:12 the client is shutdown
+ 2958247	      2001 ns/op	    1992 B/op	      25 allocs/op
+BenchmarkMetricCounter_New-10                 	2022/05/18 10:32:19 the client is shutdown
+11532721	       531.9 ns/op	     187 B/op	       4 allocs/op
+BenchmarkMetricCounter_Lookup-10              	100000000	        59.38 ns/op	      40 B/op	       2 allocs/op
+BenchmarkMetricCounter_Inc-10                 	129580708	        45.71 ns/op	      40 B/op	       2 allocs/op
+BenchmarkPrometheusCounter_Inc-10             	859958246	         6.908 ns/op	       0 B/op	       0 allocs/op
+BenchmarkPrometheusCounterVec_Inc-10          	57738178	       106.2 ns/op	      32 B/op	       1 allocs/op
+BenchmarkPrometheusCounterVec_CurreyInc-10    	86660431	        69.91 ns/op	       0 B/op	       0 allocs/op
+BenchmarkPrometheusCounterVec_WithInc-10      	866953989	         6.992 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	trpc-system/go-opentelemetry/oteltrpc/metrics/prometheus	167.837s
+goos: darwin
+goarch: arm64
+pkg: trpc-system/go-opentelemetry/oteltrpc/traces
+BenchmarkServerFilter_DisableTraceBody-10     	 3111814	      1941 ns/op	    2304 B/op	      37 allocs/op
+BenchmarkServerFilter1024-10                  	  989672	      6048 ns/op	    6727 B/op	      69 allocs/op
+BenchmarkServerFilter10240-10                 	  306673	     19339 ns/op	   37091 B/op	      69 allocs/op
+BenchmarkClientFilter_DisableTraceBody-10     	 4465000	      1344 ns/op	    1582 B/op	      24 allocs/op
+BenchmarkClientFilter1024-10                  	 1000000	      5345 ns/op	    6003 B/op	      56 allocs/op
+BenchmarkClientFilter10240-10                 	  328890	     18520 ns/op	   36277 B/op	      56 allocs/op
+BenchmarkServerFilter-10                      	 3033132	      1964 ns/op	    2304 B/op	      37 allocs/op
+BenchmarkClientFilter-10                      	 4427934	      1351 ns/op	    1582 B/op	      24 allocs/op
+BenchmarkProtoMessageToSonicJSONString-10     	22685506	       264.3 ns/op	     120 B/op	       4 allocs/op
+BenchmarkProtoMessageToJSONBytes-10           	 8188173	       735.4 ns/op	     224 B/op	       4 allocs/op
+BenchmarkProtoMessageToJSONString-10          	22783306	       263.8 ns/op	     120 B/op	       4 allocs/op
+BenchmarkProtoMessageToPBJSONString-10        	10134136	       604.6 ns/op	     376 B/op	      11 allocs/op
+BenchmarkProtoMessageToCustomJSONString-10    	22373751	       266.8 ns/op	     120 B/op	       4 allocs/op
+BenchmarkProtoMessageToJSONIndentBytes-10     	 5950502	      1003 ns/op	     240 B/op	       4 allocs/op
+BenchmarkProtoMessageToJSONIndentString-10    	12816151	       467.5 ns/op	     120 B/op	       4 allocs/op
+BenchmarkProtoMarshalTextString-10            	 4616518	      1300 ns/op	     440 B/op	      20 allocs/op
+BenchmarkProtoMarshalCompactTextString-10     	11662436	       514.6 ns/op	     368 B/op	      11 allocs/op
+BenchmarkProtoMarshalPb-10                    	46439448	       131.0 ns/op	      32 B/op	       1 allocs/op
+BenchmarkProtoSize-10                         	183052398	        32.88 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	trpc-system/go-opentelemetry/oteltrpc/traces	129.916s

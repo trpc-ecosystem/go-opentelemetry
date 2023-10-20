@@ -1,0 +1,18 @@
+type: google.api.Service
+config_version: 3
+http:
+ rules:
+ - selector: opentelemetry.ext.proto.sampler.SamplerService.SetSampler
+   post: /api/sampler
+   body: "*"
+ - selector: opentelemetry.ext.proto.sampler.SamplerService.GetSampler
+   get: /api/sampler
+ - selector: opentelemetry.ext.proto.sampler.SamplerService.DelSampler
+   delete: /api/sampler/{key}/{value}
+ - selector: opentelemetry.ext.proto.sampler.SamplerService.JudgeSampler
+   get: /api/sampler/judge/{key}/{value}
+ - selector: opentelemetry.ext.proto.sampler.SamplerService.SetSamplerV2
+   post: /api/v2/sampler
+   body: "*"
+ - selector: opentelemetry.ext.proto.sampler.SamplerService.GetSamplerV2
+   get: /api/v2/sampler

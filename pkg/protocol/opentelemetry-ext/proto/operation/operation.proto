@@ -1,0 +1,124 @@
+//
+//
+// Tencent is pleased to support the open source community by making tRPC available.
+//
+// Copyright (C) 2023 THL A29 Limited, a Tencent company.
+// All rights reserved.
+//
+// If you have downloaded a copy of the tRPC source code from Tencent,
+// please note that tRPC source code is licensed under the  Apache 2.0 License,
+// A copy of the Apache 2.0 License is included in this file.
+//
+//
+
+syntax = "proto3";
+
+package opentelemetry.ext.proto.operation;
+
+option go_package = "trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation";
+
+message Operation {
+  string version = 1;
+  Service service = 2;
+  Resource resource = 3;
+  repeated Owner owners = 4;
+  Sampler sampler = 5;
+  Alert alert = 6;
+  Metric metric = 7;
+  Trace trace = 8;
+  Log log = 9;
+}
+
+message Sampler {
+  double fraction = 1;
+}
+
+message Log {
+
+}
+
+message Trace {
+
+}
+
+message Resource {
+  string tenant = 1;
+  string app    = 2;
+  string server = 3;
+  Cloud  cloud  = 4;
+}
+
+message Cloud {
+  string provider = 1;
+  string platform = 2;
+}
+
+message Owner {
+  string name = 1;
+  string email = 2;
+}
+
+message Service {
+  string name = 1;
+}
+
+message Alert {
+  string interval = 1;
+  repeated Item items = 2;
+  string for = 3;   // 触发告警持续该时间后发出通知, 降低毛刺. 默认0m
+  string namespace = 4;  // 命名空间. 默认Production. 可选(Development/Production), 支持正则
+}
+
+message Code {
+  int32  code = 1;
+  string type = 2;
+  string description = 3;
+  string service = 4;
+  string method = 5;
+}
+
+message Metric {
+  repeated Code codes = 1;
+}
+
+message Item {
+  reserved 3, 7;
+  string alert = 8; // 告警标题
+  string name = 1; // 指标名
+  string type = 2; // 告警类型 max/min/delta_percent_max_5m/delta_percent_max_10m/delta_percent_max_1d/delta_percent_max_7d
+  double threshold = 4; // 阈值
+  string for = 5; // 持续时间
+  string namespace = 6; // namespace选择器
+  string expr = 9; // 原始查询语句
+  map<string, string> labels = 10; // 告警 label
+  map<string, string> annotations = 11; // 告警 annotations
+  repeated Matcher matchers = 12;
+}
+
+message Matcher {
+  string name = 1; 
+  string type = 2; 
+  string value = 3; 
+}
+
+message SetOperationRequest {
+  Operation operation = 1;
+}
+
+message SetOperationResponse {
+}
+
+message GetOperationRequest {
+  string tenant = 1;
+  string app    = 2;
+  string server = 3;
+}
+
+message GetOperationResponse {
+  Operation operation = 1;
+}
+
+service OperationService {
+  rpc SetOperation(SetOperationRequest) returns (SetOperationResponse);
+  rpc GetOperation(GetOperationRequest) returns (GetOperationResponse);
+}
