@@ -6,7 +6,6 @@ ALL_DOC := $(shell find . \( -name "*.md" -o -name "*.yaml" \) \
 
 ALL_GO_MOD_DIRS := $(shell find . -type f -name 'go.mod' -exec dirname {} \; | sort)
 
-ADDLICENCESE=addlicense
 MISSPELL=misspell -error
 IMPI=impi
 
@@ -16,27 +15,11 @@ GOVET = go vet -printfuncs=addDyeAndCallFunc
 GOTEST_WITH_COVERAGE = $(GOTEST) -coverprofile=coverage.out -covermode=atomic -coverpkg=./...
 
 .PHONY: precommit
-precommit: fmt vet lint build test checklicense examples
+precommit: fmt vet lint build test examples
 
 .PHONY: impi
 impi:
 	@$(IMPI) --local trpc-system/go-opentelemetry --scheme stdThirdPartyLocal --skip example/trpc/protocol --skip opentelemetry/proto ./...
-
-.PHONY: checklicense
-checklicense:
-	@ADDLICENCESEOUT=`$(ADDLICENCESE) -check $(ALL_SRC) 2>&1`; \
-		if [ "$$ADDLICENCESEOUT" ]; then \
-			echo "$(ADDLICENCESE) FAILED => add License errors:\n"; \
-			echo "$$ADDLICENCESEOUT\n"; \
-			echo "Use 'make addlicense' to fix this."; \
-			exit 1; \
-		else \
-			echo "Check License finished successfully"; \
-		fi
-
-.PHONY: addlicense
-addlicense:
-	$(ADDLICENCESE) -c 'Tencent OpenTelemetry Oteam' $(ALL_SRC)
 
 .PHONY: misspell
 misspell:
