@@ -509,7 +509,7 @@ type BatchSyncerOptions struct {
 	EnableSamplerError bool
 
 	// MaxPacketSize is the maximum number of packet size that will forcefully trigger a batch process.
-	// The deault value of MaxPacketSize is 2M (in bytes) .
+	// The default value of MaxPacketSize is 2M (in bytes) .
 	MaxPacketSize int
 }
 
