@@ -92,7 +92,7 @@ func Test_getSamplerConfig(t *testing.T) {
 							},
 						},
 					},
-					SamplerServiceAddr: "your.own.gateway.ip:port ",
+					SamplerServiceAddr: "your.own.gateway.ip:port",
 					SyncInterval:       time.Millisecond,
 				},
 			},

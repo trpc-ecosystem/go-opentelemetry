@@ -36,7 +36,7 @@ func TestCodeTypeMappingDescription_UnmarshalText(t *testing.T) {
 		{
 			name: "length exceeds maximum length",
 			args: args{
-				text: []byte("success|超长字符串超长字符串超长字符串超长字符串"),
+				text: []byte("success|Length exceeds maximum length"),
 			},
 			fields: fields{
 				CodeType:    CodeTypeSuccess.String(),
