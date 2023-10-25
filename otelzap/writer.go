@@ -21,7 +21,6 @@ import (
 	"sync/atomic"
 	"time"
 
-	v1proto "github.com/golang/protobuf/proto"
 	jsoniter "github.com/json-iterator/go"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/sdk/resource"
@@ -29,6 +28,7 @@ import (
 	logsproto "go.opentelemetry.io/proto/otlp/logs/v1"
 	resourceproto "go.opentelemetry.io/proto/otlp/resource/v1"
 	"go.uber.org/zap/zapcore"
+	"google.golang.org/protobuf/proto"
 
 	"trpc-system/go-opentelemetry/pkg/metrics"
 	sdklog "trpc-system/go-opentelemetry/sdk/log"
@@ -472,7 +472,7 @@ func (bp *BatchWriteSyncer) shouldProcessInBatch() bool {
 
 // calcLogSize calculates the packet size of a ScopeLogs
 func calcLogSize(sl *logsproto.ScopeLogs) int {
-	return v1proto.Size(sl)
+	return proto.Size(sl)
 }
 
 // BatchSyncerOption apply changes to internalOptions.

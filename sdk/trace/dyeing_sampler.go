@@ -27,6 +27,7 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/metadata"
 
 	"trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler"
@@ -149,7 +150,7 @@ func (ws *Sampler) updateDyeingMetadataDaemon() {
 
 func (ws *Sampler) updateDyeingMetadata() {
 	if ws.client == nil {
-		cc, err := grpc.Dial(ws.samplerConfig.SamplerServiceAddr, grpc.WithInsecure())
+		cc, err := grpc.Dial(ws.samplerConfig.SamplerServiceAddr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 		if err != nil {
 			return
 		}

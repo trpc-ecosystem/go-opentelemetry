@@ -35,7 +35,7 @@ var (
 	DeferredProcessCounter = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
 			Subsystem: "opentelemetry_sdk",
-			Name:      "defereed_process_counter",
+			Name:      "deferred_process_counter",
 			Help:      "deferred Process Counter",
 		},
 		[]string{"status", "telemetry"},

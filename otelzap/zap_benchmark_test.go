@@ -21,9 +21,8 @@ import (
 	sdklog "trpc-system/go-opentelemetry/sdk/log"
 
 	"go.uber.org/zap"
-
-	"github.com/golang/protobuf/proto"
 	"go.uber.org/zap/zapcore"
+	"google.golang.org/protobuf/proto"
 
 	commonproto "go.opentelemetry.io/proto/otlp/common/v1"
 	logsproto "go.opentelemetry.io/proto/otlp/logs/v1"

@@ -140,7 +140,7 @@ plugins:
         enable_zpage:  false # Default false, when enabled, the processor exports span locally and can be viewed at /debug/tracez
 ```
 
-3. metrcs plugin setup
+3. metrics plugin setup
 default registered to etcd cluster, can be turned off.
 support prometheus gateway, require program sending delete request to push gateway before exit, add defer metric.DeletePrometheusPush() in main function, e.g.,
 ```go

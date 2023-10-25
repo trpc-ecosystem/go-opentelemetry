@@ -23,6 +23,7 @@ import (
 	"time"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/metadata"
 
 	"trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
@@ -84,7 +85,7 @@ func (rc *remoteConfigurator) syncDaemon() {
 
 func (rc *remoteConfigurator) sync() {
 	if rc.client == nil {
-		cc, err := grpc.Dial(rc.remoteServiceAddr, grpc.WithInsecure())
+		cc, err := grpc.Dial(rc.remoteServiceAddr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 		if err != nil {
 			if rc.debug {
 				log.Printf("opentelemetry: remote dial err:%v", err)

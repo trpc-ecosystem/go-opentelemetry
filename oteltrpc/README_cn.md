@@ -16,7 +16,7 @@
     * caller_service: 主调方服务名，取msg.CallerServiceName()
     * caller_method: 主调方方法名，取msg.CallerMethod()
     * callee_service: 被调方服务名，取msg.CalleeServiceName()
-    * callee_method: 被调方方法名，取msg.CalleMethod()
+    * callee_method: 被调方方法名，取msg.CalleeMethod()
 
 ### 被调
 
