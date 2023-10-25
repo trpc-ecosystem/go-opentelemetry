@@ -104,7 +104,6 @@ func newTLSConfig(tlsCert TLSCert) *tls.Config {
 			Certificates: []tls.Certificate{cert},
 			RootCAs:      caCertPool,
 		}
-		tlsConfig.BuildNameToCertificate()
 		return tlsConfig
 	}
 	return nil

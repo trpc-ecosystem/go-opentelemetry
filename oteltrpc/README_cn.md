@@ -16,7 +16,7 @@
     * caller_service: 主调方服务名，取msg.CallerServiceName()
     * caller_method: 主调方方法名，取msg.CallerMethod()
     * callee_service: 被调方服务名，取msg.CalleeServiceName()
-    * callee_method: 被调方方法名，取msg.CalleMethod()
+    * callee_method: 被调方方法名，取msg.CalleeMethod()
 
 ### 被调
 
@@ -108,7 +108,7 @@
 * tps.tenant.id: 租户id
 * telemetry.sdk.language: SDK语言，hardcode "go"
 * telemetry.sdk.name: SDK名, hardcode "opentelemetry"
-* service.name(optional): service名，trpc.yaml中第一个serivce的name
+* service.name(optional): service名，trpc.yaml中第一个service的name
 
 
 #### common attributes

@@ -4,7 +4,6 @@ go 1.18
 
 require (
 	github.com/cenkalti/backoff/v4 v4.2.1
-	github.com/golang/protobuf v1.5.3
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.0
 	github.com/guillermo/go.procmeminfo v0.0.0-20131127224636-be4355a9fb0e
 	github.com/json-iterator/go v1.1.12
@@ -45,6 +44,7 @@ require (
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
+	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/btree v1.0.1 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect

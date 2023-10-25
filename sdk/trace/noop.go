@@ -21,7 +21,7 @@ import (
 
 // NoopTracerProvider implementation a tracer provider that will do nothing
 // use code lines blow to set a noop tracer
-// otel.SetTracerProvider(NooTracerProvider)
+// otel.SetTracerProvider(NoopTracerProvider)
 var NoopTracerProvider = trace.NewNoopTracerProvider()
 
 // SetNoopTracerProvider set the global trace provider as noop
