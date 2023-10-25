@@ -47,7 +47,7 @@ if [ "${COMMIT_FOUND}" != "${COMMIT_HASH}" ] ; then
 	exit -1
 fi
 
-# Check if the tag doesn't alread exists.
+# Check if the tag doesn't already exists.
 TAG_FOUND=`git tag --list ${TAG}`
 if [ "${TAG_FOUND}" = "${TAG}" ] ; then
 	printf "Tag ${TAG} already exists\n"

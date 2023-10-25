@@ -70,7 +70,7 @@ plugins:
         enabled: true # default true
         enable_register: true # register metrics endpoint to etcd, default true
         registry_endpoints: ["your.own.registry.addr:port"]
-        server_owner: # server owners seperated by ;.
+        server_owner: # server owners separated by ;.
         client_histogram_buckets: [.005, .01, .1, .5, 1, 5] # optional config for client histogram buckets(Requires incrementing values, with a maximum length of 10 elements, and the data type should be float64.）
         server_histogram_buckets: [.005, .01, .025, .05, .1, .25, .5, 1, 5] # optional config for server histogram buckets(Requires incrementing values, with a maximum length of 10 elements, and the data type should be float64.）
         disable_rpc_method_mapping: false # Optional configuration (default false). When set to true, the original interface name will be reported as-is when reporting metrics.
@@ -141,7 +141,7 @@ plugins:
 ```
 
 3. metrcs plugin setup
-default registerd to etcd cluster, can be turned off.
+default registered to etcd cluster, can be turned off.
 support prometheus gateway, require program sending delete request to push gateway before exit, add defer metric.DeletePrometheusPush() in main function, e.g.,
 ```go
 package main

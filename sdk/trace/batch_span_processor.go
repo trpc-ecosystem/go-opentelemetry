@@ -79,7 +79,7 @@ type BatchSpanProcessorOptions struct {
 	MaxExportBatchSize int
 
 	// MaxPacketSize is the maximum number of packet size that will forcefully trigger a batch process.
-	// The deault value of MaxPacketSize is 2M (in bytes) .
+	// The default value of MaxPacketSize is 2M (in bytes) .
 	MaxPacketSize int
 
 	// BlockOnQueueFull blocks onEnd() and onStart() method if the queue is full

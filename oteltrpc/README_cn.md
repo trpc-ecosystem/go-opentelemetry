@@ -108,7 +108,7 @@
 * tps.tenant.id: 租户id
 * telemetry.sdk.language: SDK语言，hardcode "go"
 * telemetry.sdk.name: SDK名, hardcode "opentelemetry"
-* service.name(optional): service名，trpc.yaml中第一个serivce的name
+* service.name(optional): service名，trpc.yaml中第一个service的name
 
 
 #### common attributes
