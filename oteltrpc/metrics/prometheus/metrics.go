@@ -50,7 +50,7 @@ var (
 
 	requestMetaDataBodyBytes = promauto.NewHistogram(prometheus.HistogramOpts{
 		Subsystem: "rpc",
-		Name:      "request_matadata_bytes",
+		Name:      "request_metadata_bytes",
 		Help:      "Request Metadata Bytes",
 		Buckets:   []float64{1024, 10240, 102400, 1024_000, 10240_000},
 	})
@@ -83,8 +83,8 @@ func ObserveRequestBodyBytes(s int) {
 	requestBodyBytes.Observe(float64(s))
 }
 
-// ObserveRequestMataDataBytes observe request metadata bytes
-func ObserveRequestMataDataBytes(s int) {
+// ObserveRequestMetaDataBytes observe request metadata bytes
+func ObserveRequestMetaDataBytes(s int) {
 	requestMetaDataBodyBytes.Observe(float64(s))
 }
 

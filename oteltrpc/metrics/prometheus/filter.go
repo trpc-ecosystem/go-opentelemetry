@@ -128,7 +128,7 @@ func calcMetaDataSize(md codec.MetaData) int {
 // monitorRequestSize monitor request size
 func monitorRequestSize(req interface{}, md codec.MetaData) {
 	ObserveRequestBodyBytes(calcBodySize(req))
-	ObserveRequestMataDataBytes(calcMetaDataSize(md))
+	ObserveRequestMetaDataBytes(calcMetaDataSize(md))
 }
 
 type serverFilterOption struct {
