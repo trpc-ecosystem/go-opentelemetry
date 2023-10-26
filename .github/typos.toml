@@ -1,0 +1,6 @@
+[type.po]
+extend-glob = ["*_test.go"]
+check-file = false
+
+[files]
+extend-exclude = ["go.mod", "go.sum"]
