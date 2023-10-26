@@ -1,6 +1,6 @@
-[default.extend-words]
-# Don't correct the surname "Teh"
-teh = "teh"
+[type.po]
+extend-glob = ["*_test.go"]
+check-file = false
 
 [files]
 extend-exclude = ["go.mod", "go.sum"]
