@@ -1,0 +1,6 @@
+[default.extend-words]
+# Don't correct the surname "Teh"
+teh = "teh"
+
+[files]
+extend-exclude = ["go.mod", "go.sum"]
