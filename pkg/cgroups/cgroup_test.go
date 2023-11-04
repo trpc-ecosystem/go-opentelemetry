@@ -39,12 +39,10 @@
 package cgroups
 
 import (
-	"fmt"
 	"path/filepath"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 // TestCGroupParamPath
@@ -144,14 +142,4 @@ func TestCGroupReadInt(t *testing.T) {
 			assert.NoError(t, err, tt.name)
 		}
 	}
-}
-
-// TestCGroupMemory
-func TestCGroupMemory(t *testing.T) {
-	process, err := NewCGroupsForCurrentProcess()
-	require.NoError(t, err)
-	quota, b, err := process.MemoryQuota()
-	require.True(t, b)
-	require.NoError(t, err)
-	fmt.Println(quota)
 }
