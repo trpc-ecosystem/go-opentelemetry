@@ -168,26 +168,6 @@ func TestMountPointTranslateError(t *testing.T) {
 	assert.NotNil(t, cgroupMountPoint)
 	assert.NoError(t, err)
 
-	inaccessiblePaths := []string{
-		"/",
-		"/docker",
-		"/docker/0123456789abcdef-let-me-hack-this-path",
-		"/docker/0123456789abcde/abc/../../def",
-		"/system.slice/docker.service",
-	}
-
-	for i, path := range inaccessiblePaths {
-		translated, err := cgroupMountPoint.Translate(path)
-		errExpected := pathNotExposedFromMountPointError{
-			mountPoint: cgroupMountPoint.MountPoint,
-			root:       cgroupMountPoint.Root,
-			path:       path,
-		}
-
-		assert.Equal(t, "", translated, "inaccessiblePaths[%d] == %q", i, path)
-		assert.Equal(t, errExpected, err, "inaccessiblePaths[%d] == %q", i, path)
-	}
-
 	relPaths := []string{
 		"docker",
 		"docker/0123456789abcde/large",

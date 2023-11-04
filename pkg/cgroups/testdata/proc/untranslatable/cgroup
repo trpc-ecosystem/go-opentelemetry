@@ -1,2 +1,2 @@
-1:cpu:/docker
-2:cpuacct:/docker
+untranslatable1:cpu:/docker
+untranslatable2:cpuacct:/docker

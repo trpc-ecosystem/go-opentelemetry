@@ -67,7 +67,8 @@ func TestNewCGroups(t *testing.T) {
 	for _, tt := range testTable {
 		cgroup, exists := cgroups[tt.subsys]
 		assert.True(t, exists, "%q expected to present in `cgroups`", tt.subsys)
-		assert.Equal(t, tt.path, cgroup.path, "%q expected for `cgroups[%q].path`, got %q", tt.path, tt.subsys, cgroup.path)
+		assert.Equal(t, tt.path, cgroup.path, "%q expected for `cgroups[%q].path`, got %q", tt.path, tt.subsys,
+			cgroup.path)
 	}
 }
 
@@ -143,13 +144,13 @@ func TestCGroupsMemoryQuota(t *testing.T) {
 func TestCGroupsCPUQuota(t *testing.T) {
 	testTable := []struct {
 		name            string
-		expectedQuota   int64
+		expectedQuota   float64
 		expectedDefined bool
 		shouldHaveError bool
 	}{
 		{
 			name:            "undefined",
-			expectedQuota:   int64(-1.0),
+			expectedQuota:   float64(-1.0),
 			expectedDefined: false,
 			shouldHaveError: false,
 		},
@@ -158,7 +159,7 @@ func TestCGroupsCPUQuota(t *testing.T) {
 	cgroups := make(CGroups)
 
 	quota, defined, err := cgroups.CPUQuota()
-	assert.Equal(t, int64(-1), quota, "nonexistent")
+	assert.Equal(t, float64(-1), quota, "nonexistent")
 	assert.False(t, defined, "nonexistent")
 	assert.NoError(t, err, "nonexistent")
 
