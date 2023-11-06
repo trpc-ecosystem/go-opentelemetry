@@ -32,6 +32,7 @@ import (
 	"trpc.group/trpc-go/trpc-go/log"
 	"trpc.group/trpc-go/trpc-go/plugin"
 
+	"trpc-ecosystem/go-opentelemetry"
 	"trpc-ecosystem/go-opentelemetry/api"
 	logtps "trpc-ecosystem/go-opentelemetry/api/log"
 	"trpc-ecosystem/go-opentelemetry/config"

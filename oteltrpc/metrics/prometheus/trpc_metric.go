@@ -50,7 +50,6 @@ func initSink() {
 // 2023-03-28 update: the style of trpc metrics api multi-dimension metrics is multi-value, Prometheus is single-value.
 // when mapping to Prometheus, use record.metric[*].name as metric name, not unique.
 // Therefor, use record.name + record.metric[*].name as metric name, but it will break the panel.
-// (https://trpc-ecosystem/go-opentelemetry/issues/107)
 // report case 1:
 // metrics.ReportMultiDimensionMetricsX(
 //
