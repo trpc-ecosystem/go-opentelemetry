@@ -25,9 +25,9 @@ import (
 	"trpc.group/trpc-go/trpc-go/admin"
 	"trpc.group/trpc-go/trpc-go/log"
 
-	"trpc-ecosystem/go-opentelemetry/api"
-	oteladmin "trpc-ecosystem/go-opentelemetry/pkg/admin"
-	"trpc-ecosystem/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/go-opentelemetry/api"
+	oteladmin "trpc.group/trpc-go/go-opentelemetry/pkg/admin"
+	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
 )
 
 // Setup .

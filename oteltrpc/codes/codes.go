@@ -20,8 +20,8 @@ import (
 
 	"trpc.group/trpc-go/trpc-go/errs"
 
-	"trpc-ecosystem/go-opentelemetry/config/codes"
-	"trpc-ecosystem/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/go-opentelemetry/config/codes"
+	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
 )
 
 // ConvertMetricsCodes converts codes to metric.CodeTypeMappingDescription

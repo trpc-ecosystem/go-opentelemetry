@@ -1,4 +1,4 @@
-module trpc-ecosystem/go-opentelemetry
+module trpc.group/trpc-go/go-opentelemetry
 
 go 1.18
 

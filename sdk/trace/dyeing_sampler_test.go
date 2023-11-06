@@ -21,7 +21,7 @@ import (
 
 	"go.opentelemetry.io/otel/sdk/trace"
 
-	"trpc-ecosystem/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler"
+	"trpc.group/trpc-go/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler"
 )
 
 func TestSampler_shouldSample(t *testing.T) {

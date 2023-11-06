@@ -9,7 +9,7 @@
 1. 匿名引入tRPC拦截器
 
 ```go
-import _ "trpc-ecosystem/go-opentelemetry/oteltrpc"
+import _ "trpc.group/trpc-go/go-opentelemetry/oteltrpc"
 ```
 
 2. 修改tRPC框架配置文件
@@ -89,7 +89,7 @@ plugins:
         #    method: # 不为空表示错误码特例仅匹配特定的(无论主被调) method, 为空表示所有 method.
         prometheus_push: # 上报指标到prometheus gateway
           enabled: false # 启用上报，默认关闭， 参见https://prometheus.io/docs/practices/pushing/#should-i-be-using-the-pushgateway
-          # 如需在程序退出后发送delete请求到push gateway，需在main()函数trpc.NewServer()之后添加defer metric.DeletePrometheusPush(),详见https://trpc-ecosystem/go-opentelemetry#4-metrcs插件配置
+          # 如需在程序退出后发送delete请求到push gateway，需在main()函数trpc.NewServer()之后添加defer metric.DeletePrometheusPush(),详见https://trpc.group/trpc-go/go-opentelemetry#4-metrcs插件配置
           url: "" # 上报地址, 如http://1.1.1.1:4318
           job: "reporter" # 名称，不能为空，默认为reporter
           interval: 60s # 上报间隔，默认60秒
@@ -144,8 +144,8 @@ package main
 
 import (
   "trpc.group/trpc-go/trpc-go"
-  _ "trpc-ecosystem/go-opentelemetry/oteltrpc"
-  "trpc-ecosystem/go-opentelemetry/sdk/metric"
+  _ "trpc.group/trpc-go/go-opentelemetry/oteltrpc"
+  "trpc.group/trpc-go/go-opentelemetry/sdk/metric"
 )
 
 func main() {

@@ -1,8 +1,8 @@
-module trpc-ecosystem/go-opentelemetry/example/metric
+module trpc.group/trpc-go/go-opentelemetry/example/metric
 
 go 1.18
 
-replace trpc-ecosystem/go-opentelemetry => ../../
+replace trpc.group/trpc-go/go-opentelemetry => ../../
 
 require (
 	github.com/prometheus/client_golang v1.12.1
@@ -11,7 +11,7 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v0.39.0
 	go.opentelemetry.io/otel/metric v1.16.0
 	go.opentelemetry.io/otel/sdk/metric v0.39.0
-	trpc-ecosystem/go-opentelemetry v1.0.0
+	trpc.group/trpc-go/go-opentelemetry v1.0.0
 )
 
 require (

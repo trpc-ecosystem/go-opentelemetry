@@ -12,11 +12,11 @@ We look forward to working with you to make this project better together!
 ## Before contributing code
 
 The project welcomes code patches, but to make sure things are well coordinated you should discuss any significant change before starting the work.
-It's recommended that you signal your intention to contribute in the issue tracker, either by claiming an [existing one](https://github.com/trpc-ecosystem/go-opentelemetry/issues) or by [opening a new issue](https://github.com/trpc-ecosystem/go-opentelemetry/issues/new).
+It's recommended that you signal your intention to contribute in the issue tracker, either by claiming an [existing one](https://github.com/trpc.group/trpc-go/go-opentelemetry/issues) or by [opening a new issue](https://github.com/trpc.group/trpc-go/go-opentelemetry/issues/new).
 
 ### Checking the issue tracker
 
-Whether you already know what contribution to make, or you are searching for an idea, the [issue tracker](https://github.com/trpc-ecosystem/go-opentelemetry/issues) is always the first place to go.
+Whether you already know what contribution to make, or you are searching for an idea, the [issue tracker](https://github.com/trpc.group/trpc-go/go-opentelemetry/issues) is always the first place to go.
 Issues are triaged to categorize them and manage the workflow.
 
 Most issues will be marked with one of the following workflow labels:

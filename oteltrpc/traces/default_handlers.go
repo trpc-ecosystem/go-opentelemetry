@@ -21,8 +21,8 @@ import (
 
 	"trpc.group/trpc-go/trpc-go/codec"
 
-	tpsapi "trpc-ecosystem/go-opentelemetry/api"
-	sdktrace "trpc-ecosystem/go-opentelemetry/sdk/trace"
+	tpsapi "trpc.group/trpc-go/go-opentelemetry/api"
+	sdktrace "trpc.group/trpc-go/go-opentelemetry/sdk/trace"
 )
 
 // DefaultTraceAttributesFunc can be set by user
