@@ -24,9 +24,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/push"
 
-	"trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
-	"trpc-system/go-opentelemetry/sdk/metric/internal/registry"
-	"trpc-system/go-opentelemetry/sdk/remote"
+	"trpc-ecosystem/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
+	"trpc-ecosystem/go-opentelemetry/sdk/metric/internal/registry"
+	"trpc-ecosystem/go-opentelemetry/sdk/remote"
 )
 
 // Setup setup metrics

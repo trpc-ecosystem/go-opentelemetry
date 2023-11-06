@@ -15,7 +15,7 @@ syntax = "proto3";
 
 package opentelemetry.ext.proto.sampler;
 
-option go_package = "trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler";
+option go_package = "trpc-ecosystem/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler";
 
 message KeyValues {
   string key = 1;

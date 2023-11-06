@@ -23,10 +23,9 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
 
-	"trpc-system/go-opentelemetry"
-	apilog "trpc-system/go-opentelemetry/api/log"
-	"trpc-system/go-opentelemetry/pkg/zpage"
-	ecotrace "trpc-system/go-opentelemetry/sdk/trace"
+	apilog "trpc-ecosystem/go-opentelemetry/api/log"
+	"trpc-ecosystem/go-opentelemetry/pkg/zpage"
+	ecotrace "trpc-ecosystem/go-opentelemetry/sdk/trace"
 )
 
 func main() {

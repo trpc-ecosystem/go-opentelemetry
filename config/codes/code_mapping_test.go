@@ -23,8 +23,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 
-	"trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
-	"trpc-system/go-opentelemetry/sdk/remote"
+	"trpc-ecosystem/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
+	"trpc-ecosystem/go-opentelemetry/sdk/remote"
 )
 
 func TestCodeConverter_Map(t *testing.T) {

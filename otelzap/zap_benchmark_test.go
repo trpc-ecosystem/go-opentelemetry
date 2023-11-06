@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	sdklog "trpc-system/go-opentelemetry/sdk/log"
+	sdklog "trpc-ecosystem/go-opentelemetry/sdk/log"
 
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"

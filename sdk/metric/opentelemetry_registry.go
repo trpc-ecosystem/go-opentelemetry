@@ -14,7 +14,7 @@
 package metric
 
 import (
-	"trpc-system/go-opentelemetry/sdk/metric/internal/registry"
+	"trpc-ecosystem/go-opentelemetry/sdk/metric/internal/registry"
 )
 
 type Registry = registry.Registry

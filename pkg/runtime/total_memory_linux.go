@@ -20,8 +20,8 @@ import (
 	procmeminfo "github.com/guillermo/go.procmeminfo"
 	"github.com/shirou/gopsutil/v3/mem"
 
-	cgroups "trpc-system/go-opentelemetry/pkg/cgroups"
-	cgroupsv2 "trpc-system/go-opentelemetry/pkg/cgroups/cgroupsv2"
+	cgroups "trpc-ecosystem/go-opentelemetry/pkg/cgroups"
+	cgroupsv2 "trpc-ecosystem/go-opentelemetry/pkg/cgroups/cgroupsv2"
 )
 
 // MemoryQuota returns total available memory.

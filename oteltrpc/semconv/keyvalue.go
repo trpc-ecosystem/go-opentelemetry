@@ -22,7 +22,7 @@ import (
 
 	"trpc.group/trpc-go/trpc-go"
 
-	tpsapi "trpc-system/go-opentelemetry/api"
+	tpsapi "trpc-ecosystem/go-opentelemetry/api"
 )
 
 const (

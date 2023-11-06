@@ -18,8 +18,8 @@ import (
 	"strconv"
 	"sync/atomic"
 
-	"trpc-system/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
-	"trpc-system/go-opentelemetry/sdk/remote"
+	"trpc-ecosystem/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
+	"trpc-ecosystem/go-opentelemetry/sdk/remote"
 )
 
 var (
