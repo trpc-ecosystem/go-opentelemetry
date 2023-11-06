@@ -8,7 +8,7 @@ title: "affected/package: "
 Please answer these questions before submitting your issue. Thanks!
 -->
 
-### What version of trpc-go-opentelementry are you using?
+### What version of trpc-go-opentelemetry are you using?
 
 
 ### Does this issue reproduce with the latest release?
