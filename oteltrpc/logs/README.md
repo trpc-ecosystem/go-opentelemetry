@@ -21,7 +21,7 @@ plugins:
   * You can increase the queue_size. If your drop rate is 2000/s, then you should adjust the queue_size to >=2048+2000
   * Modify the code to start multi-channel reporting
   * ```go
-    import "trpc-ecosystem/go-opentelemetry/exporter/asyncexporter"
+    import "trpc.group/trpc-go/go-opentelemetry/exporter/asyncexporter"
     
     func main() {
         asyncexporter.Concurrency = 3

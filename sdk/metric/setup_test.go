@@ -32,8 +32,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 
-	"trpc-ecosystem/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
-	"trpc-ecosystem/go-opentelemetry/sdk/remote"
+	"trpc.group/trpc-go/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation"
+	"trpc.group/trpc-go/go-opentelemetry/sdk/remote"
 )
 
 func TestWithConfigurator(t *testing.T) {

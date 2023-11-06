@@ -16,7 +16,7 @@ package metric
 import (
 	"github.com/prometheus/client_golang/prometheus"
 
-	pkgruntime "trpc-ecosystem/go-opentelemetry/pkg/runtime"
+	pkgruntime "trpc.group/trpc-go/go-opentelemetry/pkg/runtime"
 )
 
 var (

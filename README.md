@@ -2,12 +2,12 @@ English | [中文](README.zh_CN.md)
 
 #  Go SDK
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/trpc-ecosystem/go-opentelemetry.svg)](https://pkg.go.dev/github.com/trpc-ecosystem/go-opentelemetry)
-[![Go Report Card](https://goreportcard.com/badge/trpc.group/trpc-go/trpc-ecosystem/go-opentelemetry)](https://goreportcard.com/report/trpc.group/trpc-go/trpc-ecosystem/go-opentelemetry)
-[![LICENSE](https://img.shields.io/badge/license-Apache--2.0-green.svg)](https://github.com/trpc-ecosystem/go-opentelemetry/blob/main/LICENSE)
-[![Releases](https://img.shields.io/github/release/trpc-ecosystem/go-opentelemetry.svg?style=flat-square)](https://github.com/trpc-ecosystem/go-opentelemetry/releases)
-[![Tests](https://github.com/trpc-ecosystem/go-opentelemetry/actions/workflows/prc.yml/badge.svg)](https://github.com/trpc-ecosystem/go-opentelemetry/actions/workflows/prc.yml)
-[![Coverage](https://codecov.io/gh/trpc-ecosystem/go-opentelemetry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/trpc-ecosystem/go-opentelemetry/tree/main)
+[![Go Reference](https://pkg.go.dev/badge/github.com/trpc.group/trpc-go/go-opentelemetry.svg)](https://pkg.go.dev/github.com/trpc.group/trpc-go/go-opentelemetry)
+[![Go Report Card](https://goreportcard.com/badge/trpc.group/trpc-go/trpc.group/trpc-go/go-opentelemetry)](https://goreportcard.com/report/trpc.group/trpc-go/trpc.group/trpc-go/go-opentelemetry)
+[![LICENSE](https://img.shields.io/badge/license-Apache--2.0-green.svg)](https://github.com/trpc.group/trpc-go/go-opentelemetry/blob/main/LICENSE)
+[![Releases](https://img.shields.io/github/release/trpc.group/trpc-go/go-opentelemetry.svg?style=flat-square)](https://github.com/trpc.group/trpc-go/go-opentelemetry/releases)
+[![Tests](https://github.com/trpc.group/trpc-go/go-opentelemetry/actions/workflows/prc.yml/badge.svg)](https://github.com/trpc.group/trpc-go/go-opentelemetry/actions/workflows/prc.yml)
+[![Coverage](https://codecov.io/gh/trpc.group/trpc-go/go-opentelemetry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/trpc.group/trpc-go/go-opentelemetry/tree/main)
 
 ## Quickstart
 
@@ -16,7 +16,7 @@ English | [中文](README.zh_CN.md)
 1. import tRPC filter
 
 ```go
-import _ "trpc-ecosystem/go-opentelemetry/oteltrpc"
+import _ "trpc.group/trpc-go/go-opentelemetry/oteltrpc"
 ```
 
 2. modify tRPC config
@@ -93,7 +93,7 @@ plugins:
         #    method: # If not empty, it indicates that the error code exception only matches a specific method (regardless of whether it's a caller or callee). If empty, it applies to all methods.
         prometheus_push: # report to prometheus gateway
           enabled: false # default false， refer to  https://prometheus.io/docs/practices/pushing/#should-i-be-using-the-pushgateway
-          # If you need to send a delete request to the push gateway after the program exits, add 'defer metric.DeletePrometheusPush()' after 'trpc.NewServer()' in the main() function. For more details, see https://trpc-ecosystem/go-opentelemetry#4-metrcs-plugin-configuration.
+          # If you need to send a delete request to the push gateway after the program exits, add 'defer metric.DeletePrometheusPush()' after 'trpc.NewServer()' in the main() function. For more details, see https://trpc.group/trpc-go/go-opentelemetry#4-metrcs-plugin-configuration.
           url: "" # e.g., http://1.1.1.1:4318
           job: "reporter" # can't be empty, default: "reporter"
           interval: 60s # default 60 seconds
@@ -148,8 +148,8 @@ package main
 
 import (
   "trpc.group/trpc-go/trpc-go"
-  _ "trpc-ecosystem/go-opentelemetry/oteltrpc"
-  "trpc-ecosystem/go-opentelemetry/sdk/metric"
+  _ "trpc.group/trpc-go/go-opentelemetry/oteltrpc"
+  "trpc.group/trpc-go/go-opentelemetry/sdk/metric"
 )
 
 func main() {

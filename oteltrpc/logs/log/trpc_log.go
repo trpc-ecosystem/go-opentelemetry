@@ -14,7 +14,7 @@
 package log
 
 import (
-	"trpc-ecosystem/go-opentelemetry/oteltrpc/logs"
+	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/logs"
 )
 
 var (

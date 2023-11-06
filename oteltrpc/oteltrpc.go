@@ -34,18 +34,19 @@ import (
 	"trpc.group/trpc-go/trpc-go/filter"
 	"trpc.group/trpc-go/trpc-go/plugin"
 
-	"trpc-ecosystem/go-opentelemetry"
-	"trpc-ecosystem/go-opentelemetry/config"
-	"trpc-ecosystem/go-opentelemetry/config/codes"
-	trpccodes "trpc-ecosystem/go-opentelemetry/oteltrpc/codes"
-	"trpc-ecosystem/go-opentelemetry/oteltrpc/consts"
-	"trpc-ecosystem/go-opentelemetry/oteltrpc/logs"
-	"trpc-ecosystem/go-opentelemetry/oteltrpc/metrics/prometheus"
-	"trpc-ecosystem/go-opentelemetry/oteltrpc/traces"
-	"trpc-ecosystem/go-opentelemetry/pkg/zpage"
-	"trpc-ecosystem/go-opentelemetry/sdk/metric"
-	"trpc-ecosystem/go-opentelemetry/sdk/remote"
-	ecosystemtrace "trpc-ecosystem/go-opentelemetry/sdk/trace"
+	"trpc.group/trpc-go/go-opentelemetry"
+
+	"trpc.group/trpc-go/go-opentelemetry/config"
+	"trpc.group/trpc-go/go-opentelemetry/config/codes"
+	trpccodes "trpc.group/trpc-go/go-opentelemetry/oteltrpc/codes"
+	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/consts"
+	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/logs"
+	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/metrics/prometheus"
+	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/traces"
+	"trpc.group/trpc-go/go-opentelemetry/pkg/zpage"
+	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/go-opentelemetry/sdk/remote"
+	ecosystemtrace "trpc.group/trpc-go/go-opentelemetry/sdk/trace"
 )
 
 func init() {

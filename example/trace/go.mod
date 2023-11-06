@@ -1,14 +1,14 @@
-module trpc-ecosystem/go-opentelemetry/example/trace
+module trpc.group/trpc-go/go-opentelemetry/example/trace
 
 go 1.18
 
-replace trpc-ecosystem/go-opentelemetry => ../../
+replace trpc.group/trpc-go/go-opentelemetry => ../../
 
 require (
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.opentelemetry.io/otel/trace v1.16.0
-	trpc-ecosystem/go-opentelemetry v1.0.0
+	trpc.group/trpc-go/go-opentelemetry v1.0.0
 )
 
 require (

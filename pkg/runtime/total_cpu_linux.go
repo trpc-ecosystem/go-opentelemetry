@@ -19,7 +19,7 @@ package runtime
 import (
 	"runtime"
 
-	"trpc-ecosystem/go-opentelemetry/pkg/cgroups"
+	"trpc.group/trpc-go/go-opentelemetry/pkg/cgroups"
 )
 
 // CPUQuota returns the CPU quota applied with the CPU cgroup controller.

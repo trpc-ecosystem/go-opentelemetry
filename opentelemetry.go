@@ -31,13 +31,13 @@ import (
 	apitrace "go.opentelemetry.io/otel/trace"
 	"google.golang.org/grpc"
 
-	"trpc-ecosystem/go-opentelemetry/api"
-	apilog "trpc-ecosystem/go-opentelemetry/api/log"
-	ecosystemotlp "trpc-ecosystem/go-opentelemetry/exporter/otlp"
-	"trpc-ecosystem/go-opentelemetry/exporter/retry"
-	"trpc-ecosystem/go-opentelemetry/pkg/zpage"
-	sdklog "trpc-ecosystem/go-opentelemetry/sdk/log"
-	"trpc-ecosystem/go-opentelemetry/sdk/trace"
+	"trpc.group/trpc-go/go-opentelemetry/api"
+	apilog "trpc.group/trpc-go/go-opentelemetry/api/log"
+	ecosystemotlp "trpc.group/trpc-go/go-opentelemetry/exporter/otlp"
+	"trpc.group/trpc-go/go-opentelemetry/exporter/retry"
+	"trpc.group/trpc-go/go-opentelemetry/pkg/zpage"
+	sdklog "trpc.group/trpc-go/go-opentelemetry/sdk/log"
+	"trpc.group/trpc-go/go-opentelemetry/sdk/trace"
 
 	_ "google.golang.org/grpc/encoding/gzip" // open gzip
 )

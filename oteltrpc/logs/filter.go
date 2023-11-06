@@ -23,8 +23,8 @@ import (
 	"trpc.group/trpc-go/trpc-go/errs"
 	"trpc.group/trpc-go/trpc-go/filter"
 
-	apilog "trpc-ecosystem/go-opentelemetry/api/log"
-	"trpc-ecosystem/go-opentelemetry/oteltrpc/semconv"
+	apilog "trpc.group/trpc-go/go-opentelemetry/api/log"
+	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/semconv"
 )
 
 var (

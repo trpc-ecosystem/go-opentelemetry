@@ -12,11 +12,11 @@
 ## 在贡献代码之前
 
 项目欢迎代码补丁，但为了确保事情得到良好协调，您应该在开始工作之前讨论任何重大变更。
-建议您在 issue 跟踪器中表明您的贡献意图，可以通过[认领现有 issue](https://github.com/trpc-ecosystem/go-opentelemetry/issues)或[创建新 issue](https://github.com/trpc-ecosystem/go-opentelemetry/issues/new) 来实现。
+建议您在 issue 跟踪器中表明您的贡献意图，可以通过[认领现有 issue](https://github.com/trpc.group/trpc-go/go-opentelemetry/issues)或[创建新 issue](https://github.com/trpc.group/trpc-go/go-opentelemetry/issues/new) 来实现。
 
 ### 查看 issue 跟踪器
 
-无论您已经知道要做哪些贡献，还是正在寻找想法，[issue 跟踪器](https://github.com/trpc-ecosystem/go-opentelemetry/issues)始终是您的第一个去处。
+无论您已经知道要做哪些贡献，还是正在寻找想法，[issue 跟踪器](https://github.com/trpc.group/trpc-go/go-opentelemetry/issues)始终是您的第一个去处。
 issue 会被分类以管理工作流程。
 
 大多数 issue 都会被标记为以下工作流标签之一：

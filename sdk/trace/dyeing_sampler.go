@@ -30,7 +30,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/metadata"
 
-	"trpc-ecosystem/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler"
+	"trpc.group/trpc-go/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/sampler"
 )
 
 const (

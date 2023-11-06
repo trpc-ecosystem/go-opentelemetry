@@ -20,8 +20,8 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"trpc-ecosystem/go-opentelemetry/api"
-	"trpc-ecosystem/go-opentelemetry/exporter/retry"
+	"trpc.group/trpc-go/go-opentelemetry/api"
+	"trpc.group/trpc-go/go-opentelemetry/exporter/retry"
 )
 
 const (
