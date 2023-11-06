@@ -20,7 +20,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"go.opentelemetry.io/otel/trace"
 
-	"trpc-system/go-opentelemetry/config/codes"
+	"trpc-ecosystem/go-opentelemetry/config/codes"
 )
 
 // ClientReporter ...

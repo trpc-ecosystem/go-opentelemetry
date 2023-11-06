@@ -1,9 +1,9 @@
-module trpc-system/go-opentelemetry/oteltrpc/example/greeter
+module trpc-ecosystem/go-opentelemetry/oteltrpc/example/greeter
 
 go 1.18
 
 require (
-	trpc-system/go-opentelemetry/oteltrpc v1.0.0
+	trpc-ecosystem/go-opentelemetry/oteltrpc v1.0.0
 	trpc.group/trpc-go/trpc-go v1.0.0
 )
 
@@ -82,12 +82,12 @@ require (
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	trpc-system/go-opentelemetry v1.0.0 // indirect
+	trpc-ecosystem/go-opentelemetry v1.0.0 // indirect
 	trpc.group/trpc-go/tnet v0.0.0-20230810071536-9d05338021cf // indirect
 	trpc.group/trpc/trpc-protocol/pb/go/trpc v0.0.0-20230803031059-de4168eb5952 // indirect
 )
 
 replace (
-	trpc-system/go-opentelemetry => ../../../
-	trpc-system/go-opentelemetry/oteltrpc => ../../
+	trpc-ecosystem/go-opentelemetry => ../../../
+	trpc-ecosystem/go-opentelemetry/oteltrpc => ../../
 )

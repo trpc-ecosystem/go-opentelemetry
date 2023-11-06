@@ -25,8 +25,8 @@ import (
 	"trpc.group/trpc-go/trpc-go/filter"
 	"trpc.group/trpc-go/trpc-go/http"
 
-	trpccodes "trpc-system/go-opentelemetry/oteltrpc/codes"
-	"trpc-system/go-opentelemetry/sdk/metric"
+	trpccodes "trpc-ecosystem/go-opentelemetry/oteltrpc/codes"
+	"trpc-ecosystem/go-opentelemetry/sdk/metric"
 )
 
 // ServerFilter with prometheus metric

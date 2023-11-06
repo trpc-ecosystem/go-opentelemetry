@@ -30,8 +30,8 @@ import (
 	"go.uber.org/zap/zapcore"
 	"google.golang.org/protobuf/proto"
 
-	"trpc-system/go-opentelemetry/pkg/metrics"
-	sdklog "trpc-system/go-opentelemetry/sdk/log"
+	"trpc-ecosystem/go-opentelemetry/pkg/metrics"
+	sdklog "trpc-ecosystem/go-opentelemetry/sdk/log"
 )
 
 const (

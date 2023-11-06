@@ -36,8 +36,8 @@ import (
 	"trpc.group/trpc-go/trpc-go/errs"
 	"trpc.group/trpc-go/trpc-go/server"
 
-	pb "trpc-system/go-opentelemetry/oteltrpc/example/testproto"
-	"trpc-system/go-opentelemetry/sdk/metric"
+	pb "trpc-ecosystem/go-opentelemetry/oteltrpc/example/testproto"
+	"trpc-ecosystem/go-opentelemetry/sdk/metric"
 )
 
 var (

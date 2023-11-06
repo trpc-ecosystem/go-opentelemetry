@@ -1,15 +1,15 @@
 goos: darwin
 goarch: arm64
-pkg: trpc-system/go-opentelemetry/oteltrpc/logs
+pkg: trpc-ecosystem/go-opentelemetry/oteltrpc/logs
 BenchmarkSpanLogf10-10          	27176132	       221.1 ns/op	     184 B/op	       4 allocs/op
 BenchmarkSpanLogf1000-10        	 5548359	      1109 ns/op	    2217 B/op	       5 allocs/op
 BenchmarkSpanLogf100000-10      	   78422	     76683 ns/op	  319966 B/op	       7 allocs/op
 BenchmarkSpanLogf10000000-10    	     927	   5990899 ns/op	30008967 B/op	       9 allocs/op
 PASS
-ok  	trpc-system/go-opentelemetry/oteltrpc/logs	27.235s
+ok  	trpc-ecosystem/go-opentelemetry/oteltrpc/logs	27.235s
 goos: darwin
 goarch: arm64
-pkg: trpc-system/go-opentelemetry/oteltrpc/metrics/prometheus
+pkg: trpc-ecosystem/go-opentelemetry/oteltrpc/metrics/prometheus
 BenchmarkSetGauge1010-10                      	19906334	       293.8 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSetGauge2020-10                      	 6858799	       876.7 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSetGauge100100-10                    	  396932	     14661 ns/op	       0 B/op	       0 allocs/op
@@ -44,10 +44,10 @@ BenchmarkPrometheusCounterVec_Inc-10          	57738178	       106.2 ns/op	     
 BenchmarkPrometheusCounterVec_CurreyInc-10    	86660431	        69.91 ns/op	       0 B/op	       0 allocs/op
 BenchmarkPrometheusCounterVec_WithInc-10      	866953989	         6.992 ns/op	       0 B/op	       0 allocs/op
 PASS
-ok  	trpc-system/go-opentelemetry/oteltrpc/metrics/prometheus	167.837s
+ok  	trpc-ecosystem/go-opentelemetry/oteltrpc/metrics/prometheus	167.837s
 goos: darwin
 goarch: arm64
-pkg: trpc-system/go-opentelemetry/oteltrpc/traces
+pkg: trpc-ecosystem/go-opentelemetry/oteltrpc/traces
 BenchmarkServerFilter_DisableTraceBody-10     	 3111814	      1941 ns/op	    2304 B/op	      37 allocs/op
 BenchmarkServerFilter1024-10                  	  989672	      6048 ns/op	    6727 B/op	      69 allocs/op
 BenchmarkServerFilter10240-10                 	  306673	     19339 ns/op	   37091 B/op	      69 allocs/op
@@ -68,4 +68,4 @@ BenchmarkProtoMarshalCompactTextString-10     	11662436	       514.6 ns/op	     
 BenchmarkProtoMarshalPb-10                    	46439448	       131.0 ns/op	      32 B/op	       1 allocs/op
 BenchmarkProtoSize-10                         	183052398	        32.88 ns/op	       0 B/op	       0 allocs/op
 PASS
-ok  	trpc-system/go-opentelemetry/oteltrpc/traces	129.916s
+ok  	trpc-ecosystem/go-opentelemetry/oteltrpc/traces	129.916s

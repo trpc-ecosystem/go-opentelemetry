@@ -19,9 +19,9 @@ import (
 	"go.opentelemetry.io/otel/sdk/resource"
 	"go.uber.org/zap"
 
-	"trpc-system/go-opentelemetry/api"
-	otlplog "trpc-system/go-opentelemetry/exporter/otlp"
-	"trpc-system/go-opentelemetry/otelzap"
+	"trpc-ecosystem/go-opentelemetry/api"
+	otlplog "trpc-ecosystem/go-opentelemetry/exporter/otlp"
+	"trpc-ecosystem/go-opentelemetry/otelzap"
 )
 
 func main() {

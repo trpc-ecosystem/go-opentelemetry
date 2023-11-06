@@ -23,8 +23,8 @@ import (
 	logsproto "go.opentelemetry.io/proto/otlp/logs/v1"
 	"google.golang.org/protobuf/proto"
 
-	"trpc-system/go-opentelemetry/pkg/debug"
-	"trpc-system/go-opentelemetry/pkg/metrics"
+	"trpc-ecosystem/go-opentelemetry/pkg/debug"
+	"trpc-ecosystem/go-opentelemetry/pkg/metrics"
 )
 
 const (

@@ -21,8 +21,8 @@ import (
 	"trpc.group/trpc-go/trpc-go/client"
 	"trpc.group/trpc-go/trpc-go/server"
 
-	trpccodes "trpc-system/go-opentelemetry/oteltrpc/codes"
-	"trpc-system/go-opentelemetry/sdk/metric"
+	trpccodes "trpc-ecosystem/go-opentelemetry/oteltrpc/codes"
+	"trpc-ecosystem/go-opentelemetry/sdk/metric"
 )
 
 const systemName = "trpc"

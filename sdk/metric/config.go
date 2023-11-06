@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"trpc-system/go-opentelemetry/sdk/remote"
+	"trpc-ecosystem/go-opentelemetry/sdk/remote"
 )
 
 // Config metric config

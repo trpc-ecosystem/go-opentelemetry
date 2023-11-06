@@ -3,20 +3,20 @@ English | [中文](README.zh_CN.md)
 #  Go SDK
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/trpc-ecosystem/go-opentelemetry.svg)](https://pkg.go.dev/github.com/trpc-ecosystem/go-opentelemetry)
-[![Go Report Card](https://goreportcard.com/badge/trpc.group/trpc-go/trpc-system/go-opentelemetry)](https://goreportcard.com/report/trpc.group/trpc-go/trpc-system/go-opentelemetry)
+[![Go Report Card](https://goreportcard.com/badge/trpc.group/trpc-go/trpc-ecosystem/go-opentelemetry)](https://goreportcard.com/report/trpc.group/trpc-go/trpc-ecosystem/go-opentelemetry)
 [![LICENSE](https://img.shields.io/badge/license-Apache--2.0-green.svg)](https://github.com/trpc-ecosystem/go-opentelemetry/blob/main/LICENSE)
 [![Releases](https://img.shields.io/github/release/trpc-ecosystem/go-opentelemetry.svg?style=flat-square)](https://github.com/trpc-ecosystem/go-opentelemetry/releases)
 [![Tests](https://github.com/trpc-ecosystem/go-opentelemetry/actions/workflows/prc.yml/badge.svg)](https://github.com/trpc-ecosystem/go-opentelemetry/actions/workflows/prc.yml)
 [![Coverage](https://codecov.io/gh/trpc-ecosystem/go-opentelemetry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/trpc-ecosystem/go-opentelemetry/tree/main)
 
-## quickstart
+## Quickstart
 
-### 1. use trpctelemetry (recommended for tRPC)
+### 1. Use trpctelemetry (recommended for tRPC)
 
 1. import tRPC filter
 
 ```go
-import _ "trpc-system/go-opentelemetry/oteltrpc"
+import _ "trpc-ecosystem/go-opentelemetry/oteltrpc"
 ```
 
 2. modify tRPC config
@@ -93,7 +93,7 @@ plugins:
         #    method: # If not empty, it indicates that the error code exception only matches a specific method (regardless of whether it's a caller or callee). If empty, it applies to all methods.
         prometheus_push: # report to prometheus gateway
           enabled: false # default false， refer to  https://prometheus.io/docs/practices/pushing/#should-i-be-using-the-pushgateway
-          # If you need to send a delete request to the push gateway after the program exits, add 'defer metric.DeletePrometheusPush()' after 'trpc.NewServer()' in the main() function. For more details, see https://trpc-system/go-opentelemetry#4-metrcs-plugin-configuration.
+          # If you need to send a delete request to the push gateway after the program exits, add 'defer metric.DeletePrometheusPush()' after 'trpc.NewServer()' in the main() function. For more details, see https://trpc-ecosystem/go-opentelemetry#4-metrcs-plugin-configuration.
           url: "" # e.g., http://1.1.1.1:4318
           job: "reporter" # can't be empty, default: "reporter"
           interval: 60s # default 60 seconds
@@ -140,7 +140,7 @@ plugins:
         enable_zpage:  false # Default false, when enabled, the processor exports span locally and can be viewed at /debug/tracez
 ```
 
-3. metrics plugin setup
+3. Metrics plugin setup
 default registered to etcd cluster, can be turned off.
 support prometheus gateway, require program sending delete request to push gateway before exit, add defer metric.DeletePrometheusPush() in main function, e.g.,
 ```go
@@ -148,8 +148,8 @@ package main
 
 import (
   "trpc.group/trpc-go/trpc-go"
-  _ "trpc-system/go-opentelemetry/oteltrpc"
-  "trpc-system/go-opentelemetry/sdk/metric"
+  _ "trpc-ecosystem/go-opentelemetry/oteltrpc"
+  "trpc-ecosystem/go-opentelemetry/sdk/metric"
 )
 
 func main() {
@@ -160,6 +160,6 @@ func main() {
 ```
 
 
-### 2. use opentelemetry sdk
+### 2.Use opentelemetry sdk
 
 If the framework used by the business does not implement a reporting plugin similar to trpc-go, you can also directly integrate with the OpenTelemetry SDK. For a reporting demo, please refer to the following: [example](./example)。

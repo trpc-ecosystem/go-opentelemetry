@@ -19,8 +19,8 @@ import (
 
 	"trpc.group/trpc-go/trpc-go/log"
 
-	"trpc-system/go-opentelemetry/config"
-	"trpc-system/go-opentelemetry/oteltrpc/logs"
+	"trpc-ecosystem/go-opentelemetry/config"
+	"trpc-ecosystem/go-opentelemetry/oteltrpc/logs"
 )
 
 // doFlowLog

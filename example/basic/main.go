@@ -23,10 +23,9 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
 
-	"trpc-system/go-opentelemetry"
-	"trpc-system/go-opentelemetry/api"
-	apilog "trpc-system/go-opentelemetry/api/log"
-	ecotrace "trpc-system/go-opentelemetry/sdk/trace"
+	"trpc-ecosystem/go-opentelemetry/api"
+	apilog "trpc-ecosystem/go-opentelemetry/api/log"
+	ecotrace "trpc-ecosystem/go-opentelemetry/sdk/trace"
 )
 
 var meter = otel.Meter("my_meter")

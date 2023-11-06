@@ -21,7 +21,7 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 
-	"trpc-system/go-opentelemetry/pkg/metrics"
+	"trpc-ecosystem/go-opentelemetry/pkg/metrics"
 )
 
 var _ sdktrace.SpanProcessor = (*DeferredSampleProcessor)(nil)

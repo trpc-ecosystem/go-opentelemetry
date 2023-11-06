@@ -18,7 +18,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"go.opentelemetry.io/otel"
 
-	opentelemetry "trpc-system/go-opentelemetry"
+	opentelemetry "trpc-ecosystem/go-opentelemetry"
 )
 
 var (

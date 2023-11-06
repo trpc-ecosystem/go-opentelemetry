@@ -1,13 +1,13 @@
-module trpc-system/go-opentelemetry/example/aysncexporterlog
+module trpc-ecosystem/go-opentelemetry/example/aysncexporterlog
 
 go 1.18
 
-replace trpc-system/go-opentelemetry => ../../
+replace trpc-ecosystem/go-opentelemetry => ../../
 
 require (
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.uber.org/zap v1.24.0
-	trpc-system/go-opentelemetry v1.0.0
+	trpc-ecosystem/go-opentelemetry v1.0.0
 )
 
 require (

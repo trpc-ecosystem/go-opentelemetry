@@ -14,7 +14,7 @@
 package metric
 
 import (
-	"trpc-system/go-opentelemetry/config/codes"
+	"trpc-ecosystem/go-opentelemetry/config/codes"
 )
 
 type Code = codes.Code

@@ -19,7 +19,7 @@ precommit: fmt vet lint build test examples
 
 .PHONY: impi
 impi:
-	@$(IMPI) --local trpc-system/go-opentelemetry --scheme stdThirdPartyLocal --skip example/trpc/protocol --skip opentelemetry/proto ./...
+	@$(IMPI) --local trpc-ecosystem/go-opentelemetry --scheme stdThirdPartyLocal --skip example/trpc/protocol --skip opentelemetry/proto ./...
 
 .PHONY: misspell
 misspell:
@@ -83,5 +83,5 @@ examples:
 .PHONY: fmt
 fmt:
 	gofmt -w -s .
-	goimports -w -local trpc-system/go-opentelemetry ./
+	goimports -w -local trpc-ecosystem/go-opentelemetry ./
 
