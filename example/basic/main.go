@@ -22,6 +22,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
+	opentelemetry "trpc.group/trpc-go/trpc-opentelemetry"
 
 	"trpc.group/trpc-go/trpc-opentelemetry/api"
 	apilog "trpc.group/trpc-go/trpc-opentelemetry/api/log"

@@ -5,7 +5,6 @@ go 1.18
 replace trpc.group/trpc-go/trpc-opentelemetry v1.0.0 => ../
 
 require (
-	git.code.oa.com/trpc-go/trpc-go v0.15.1
 	github.com/golang/protobuf v1.5.3
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/json-iterator/go v1.1.12
@@ -30,9 +29,6 @@ require (
 )
 
 require (
-	git.woa.com/jce/jce v1.2.0 // indirect
-	git.woa.com/trpc-go/go_reuseport v1.7.0 // indirect
-	git.woa.com/trpc-go/tnet v0.0.9 // indirect
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
