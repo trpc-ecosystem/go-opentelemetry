@@ -24,7 +24,7 @@ import (
 	logsproto "go.opentelemetry.io/proto/otlp/logs/v1"
 	resourceproto "go.opentelemetry.io/proto/otlp/resource/v1"
 
-	"trpc.group/trpc-go/go-opentelemetry/api/log"
+	"trpc.group/trpc-go/trpc-opentelemetry/api/log"
 )
 
 var _ log.Logger = (*Logger)(nil)

@@ -22,11 +22,11 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
+	opentelemetry "trpc.group/trpc-go/trpc-opentelemetry"
 
-	"trpc.group/trpc-go/go-opentelemetry"
-	apilog "trpc.group/trpc-go/go-opentelemetry/api/log"
-	"trpc.group/trpc-go/go-opentelemetry/pkg/zpage"
-	ecotrace "trpc.group/trpc-go/go-opentelemetry/sdk/trace"
+	apilog "trpc.group/trpc-go/trpc-opentelemetry/api/log"
+	"trpc.group/trpc-go/trpc-opentelemetry/pkg/zpage"
+	ecotrace "trpc.group/trpc-go/trpc-opentelemetry/sdk/trace"
 )
 
 func main() {

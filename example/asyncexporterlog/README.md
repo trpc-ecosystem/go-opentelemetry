@@ -1,7 +1,7 @@
 demo：使用asyncexporter上报日志
 
 ```go
-import 	"trpc.group/trpc-go/go-opentelemetry/exporter/asyncexporter"
+import 	"trpc.group/trpc-go/trpc-opentelemetry/exporter/asyncexporter"
 func main() {
 	//一定要在trpc.NewServer()以前使用
 	asyncexporter.Concurrency = 4

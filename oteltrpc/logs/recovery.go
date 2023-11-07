@@ -22,8 +22,8 @@ import (
 	"trpc.group/trpc-go/trpc-go/filter"
 	"trpc.group/trpc-go/trpc-go/log"
 
-	"trpc.group/trpc-go/go-opentelemetry/pkg/stack"
-	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/trpc-opentelemetry/pkg/stack"
+	"trpc.group/trpc-go/trpc-opentelemetry/sdk/metric"
 )
 
 // RecoveryHandler recovery

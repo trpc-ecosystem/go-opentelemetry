@@ -22,7 +22,7 @@ import (
 	"trpc.group/trpc-go/trpc-go/log"
 	pb "trpc.group/trpc-go/trpc-go/testdata/trpc/helloworld"
 
-	"trpc.group/trpc-go/go-opentelemetry/config"
+	"trpc.group/trpc-go/trpc-opentelemetry/config"
 )
 
 var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")

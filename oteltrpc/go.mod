@@ -1,8 +1,11 @@
-module trpc.group/trpc-go/go-opentelemetry/oteltrpc
+module trpc.group/trpc-go/trpc-opentelemetry/oteltrpc
 
 go 1.18
 
+replace trpc.group/trpc-go/trpc-opentelemetry v1.0.0 => ../
+
 require (
+	git.code.oa.com/trpc-go/trpc-go v0.15.1
 	github.com/golang/protobuf v1.5.3
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/json-iterator/go v1.1.12
@@ -22,11 +25,14 @@ require (
 	google.golang.org/protobuf v1.30.0
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
-	trpc.group/trpc-go/go-opentelemetry v1.0.0
 	trpc.group/trpc-go/trpc-go v1.0.0
+	trpc.group/trpc-go/trpc-opentelemetry v1.0.0
 )
 
 require (
+	git.woa.com/jce/jce v1.2.0 // indirect
+	git.woa.com/trpc-go/go_reuseport v1.7.0 // indirect
+	git.woa.com/trpc-go/tnet v0.0.9 // indirect
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -89,4 +95,4 @@ require (
 	trpc.group/trpc/trpc-protocol/pb/go/trpc v0.0.0-20230803031059-de4168eb5952 // indirect
 )
 
-replace trpc.group/trpc-go/go-opentelemetry => ../
+replace trpc.group/trpc-go/trpc-opentelemetry => ../

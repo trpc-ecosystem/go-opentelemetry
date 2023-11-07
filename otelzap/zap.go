@@ -31,8 +31,8 @@ import (
 	"go.uber.org/zap/zapcore"
 	"google.golang.org/protobuf/proto"
 
-	apilog "trpc.group/trpc-go/go-opentelemetry/api/log"
-	sdklog "trpc.group/trpc-go/go-opentelemetry/sdk/log"
+	apilog "trpc.group/trpc-go/trpc-opentelemetry/api/log"
+	sdklog "trpc.group/trpc-go/trpc-opentelemetry/sdk/log"
 )
 
 var _ zapcore.Encoder = (*encoder)(nil)
