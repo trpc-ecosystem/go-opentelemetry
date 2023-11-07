@@ -1,6 +1,8 @@
-module trpc.group/trpc-go/go-opentelemetry/oteltrpc
+module trpc.group/trpc-go/trpc-opentelemetry/oteltrpc
 
 go 1.18
+
+replace trpc.group/trpc-go/trpc-opentelemetry v1.0.0 => ../
 
 require (
 	github.com/golang/protobuf v1.5.3
@@ -22,8 +24,8 @@ require (
 	google.golang.org/protobuf v1.30.0
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
-	trpc.group/trpc-go/go-opentelemetry v1.0.0
 	trpc.group/trpc-go/trpc-go v1.0.0
+	trpc.group/trpc-go/trpc-opentelemetry v1.0.0
 )
 
 require (
@@ -89,4 +91,4 @@ require (
 	trpc.group/trpc/trpc-protocol/pb/go/trpc v0.0.0-20230803031059-de4168eb5952 // indirect
 )
 
-replace trpc.group/trpc-go/go-opentelemetry => ../
+replace trpc.group/trpc-go/trpc-opentelemetry => ../

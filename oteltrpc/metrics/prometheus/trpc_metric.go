@@ -30,7 +30,7 @@ import (
 	"trpc.group/trpc-go/trpc-go/log"
 	"trpc.group/trpc-go/trpc-go/metrics"
 
-	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/consts"
+	"trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/consts"
 )
 
 func initSink() {

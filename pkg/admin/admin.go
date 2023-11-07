@@ -18,8 +18,8 @@ import (
 	"net/http"
 	"net/http/pprof"
 
-	"trpc.group/trpc-go/go-opentelemetry/pkg/zpage"
-	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/trpc-opentelemetry/pkg/zpage"
+	"trpc.group/trpc-go/trpc-opentelemetry/sdk/metric"
 )
 
 // Server is admin server, wrap http.Server

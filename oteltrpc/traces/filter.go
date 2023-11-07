@@ -35,14 +35,14 @@ import (
 	"trpc.group/trpc-go/trpc-go/filter"
 	"trpc.group/trpc-go/trpc-go/log"
 
-	"trpc.group/trpc-go/go-opentelemetry/api"
-	"trpc.group/trpc-go/go-opentelemetry/config"
-	ecocodes "trpc.group/trpc-go/go-opentelemetry/config/codes"
-	trpccodes "trpc.group/trpc-go/go-opentelemetry/oteltrpc/codes"
-	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/logs"
-	trpcsemconv "trpc.group/trpc-go/go-opentelemetry/oteltrpc/semconv"
-	oteladmin "trpc.group/trpc-go/go-opentelemetry/pkg/admin"
-	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/trpc-opentelemetry/api"
+	"trpc.group/trpc-go/trpc-opentelemetry/config"
+	ecocodes "trpc.group/trpc-go/trpc-opentelemetry/config/codes"
+	trpccodes "trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/codes"
+	"trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/logs"
+	trpcsemconv "trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/semconv"
+	oteladmin "trpc.group/trpc-go/trpc-opentelemetry/pkg/admin"
+	"trpc.group/trpc-go/trpc-opentelemetry/sdk/metric"
 )
 
 var (

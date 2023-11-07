@@ -19,7 +19,7 @@ import (
 	"trpc.group/trpc-go/trpc-go"
 	pb "trpc.group/trpc-go/trpc-go/testdata/trpc/helloworld"
 
-	_ "trpc.group/trpc-go/go-opentelemetry/oteltrpc" // trpctelemetry
+	_ "trpc.group/trpc-go/trpc-opentelemetry/oteltrpc" // trpctelemetry
 )
 
 // GreeterServerImpl greeter service implement

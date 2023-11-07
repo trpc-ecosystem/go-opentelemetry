@@ -21,7 +21,7 @@ plugins:
   * 可以调大queue_size。假如你的drop量是2000/s，那么你应该把queue_size调整到 >=2048+2000
   * 修改代码启动多通道上报
   * ```go
-    import "trpc.group/trpc-go/go-opentelemetry/exporter/asyncexporter"
+    import "trpc.group/trpc-go/trpc-opentelemetry/exporter/asyncexporter"
     
     func main() {
         asyncexporter.Concurrency = 3

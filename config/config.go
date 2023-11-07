@@ -17,10 +17,10 @@ import (
 	"strings"
 	"time"
 
-	"trpc.group/trpc-go/go-opentelemetry"
-	"trpc.group/trpc-go/go-opentelemetry/api/log"
-	"trpc.group/trpc-go/go-opentelemetry/config/codes"
-	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/trpc-opentelemetry"
+	"trpc.group/trpc-go/trpc-opentelemetry/api/log"
+	"trpc.group/trpc-go/trpc-opentelemetry/config/codes"
+	"trpc.group/trpc-go/trpc-opentelemetry/sdk/metric"
 )
 
 // Config opentelemetry trpc plugin config

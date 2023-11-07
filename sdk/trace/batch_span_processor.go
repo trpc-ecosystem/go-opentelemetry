@@ -24,8 +24,8 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
 
-	"trpc.group/trpc-go/go-opentelemetry/pkg/debug"
-	"trpc.group/trpc-go/go-opentelemetry/pkg/metrics"
+	"trpc.group/trpc-go/trpc-opentelemetry/pkg/debug"
+	"trpc.group/trpc-go/trpc-opentelemetry/pkg/metrics"
 )
 
 // Defaults for BatchSpanProcessorOptions.

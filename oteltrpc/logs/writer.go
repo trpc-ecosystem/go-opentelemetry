@@ -32,17 +32,17 @@ import (
 	"trpc.group/trpc-go/trpc-go/log"
 	"trpc.group/trpc-go/trpc-go/plugin"
 
-	"trpc.group/trpc-go/go-opentelemetry"
+	"trpc.group/trpc-go/trpc-opentelemetry"
 
-	"trpc.group/trpc-go/go-opentelemetry/api"
-	logtps "trpc.group/trpc-go/go-opentelemetry/api/log"
-	"trpc.group/trpc-go/go-opentelemetry/config"
-	"trpc.group/trpc-go/go-opentelemetry/exporter/asyncexporter"
-	otlplog "trpc.group/trpc-go/go-opentelemetry/exporter/otlp"
-	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/consts"
-	otelprometheus "trpc.group/trpc-go/go-opentelemetry/oteltrpc/metrics/prometheus"
-	"trpc.group/trpc-go/go-opentelemetry/otelzap"
-	sdklog "trpc.group/trpc-go/go-opentelemetry/sdk/log"
+	"trpc.group/trpc-go/trpc-opentelemetry/api"
+	logtps "trpc.group/trpc-go/trpc-opentelemetry/api/log"
+	"trpc.group/trpc-go/trpc-opentelemetry/config"
+	"trpc.group/trpc-go/trpc-opentelemetry/exporter/asyncexporter"
+	otlplog "trpc.group/trpc-go/trpc-opentelemetry/exporter/otlp"
+	"trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/consts"
+	otelprometheus "trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/metrics/prometheus"
+	"trpc.group/trpc-go/trpc-opentelemetry/otelzap"
+	sdklog "trpc.group/trpc-go/trpc-opentelemetry/sdk/log"
 )
 
 const (

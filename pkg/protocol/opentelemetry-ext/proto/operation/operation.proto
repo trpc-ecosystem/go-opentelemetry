@@ -15,7 +15,7 @@ syntax = "proto3";
 
 package opentelemetry.ext.proto.operation;
 
-option go_package = "trpc.group/trpc-go/go-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation";
+option go_package = "trpc.group/trpc-go/trpc-opentelemetry/pkg/protocol/opentelemetry-ext/proto/operation";
 
 message Operation {
   string version = 1;

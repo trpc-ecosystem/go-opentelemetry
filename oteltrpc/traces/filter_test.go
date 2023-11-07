@@ -29,9 +29,9 @@ import (
 	"trpc.group/trpc-go/trpc-go/log"
 	pb "trpc.group/trpc-go/trpc-go/testdata/trpc/helloworld"
 
-	"trpc.group/trpc-go/go-opentelemetry/api"
-	"trpc.group/trpc-go/go-opentelemetry/config"
-	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/codes"
+	"trpc.group/trpc-go/trpc-opentelemetry/api"
+	"trpc.group/trpc-go/trpc-opentelemetry/config"
+	"trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/codes"
 )
 
 // BenchmarkServerFilter

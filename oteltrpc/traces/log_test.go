@@ -20,8 +20,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"trpc.group/trpc-go/trpc-go/log"
 
-	"trpc.group/trpc-go/go-opentelemetry/config"
-	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/logs"
+	"trpc.group/trpc-go/trpc-opentelemetry/config"
+	"trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/logs"
 )
 
 func Test_doFlowLog(t *testing.T) {

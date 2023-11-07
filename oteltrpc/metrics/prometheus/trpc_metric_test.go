@@ -24,7 +24,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"trpc.group/trpc-go/trpc-go/metrics"
 
-	"trpc.group/trpc-go/go-opentelemetry/sdk/metric"
+	"trpc.group/trpc-go/trpc-opentelemetry/sdk/metric"
 )
 
 func TestSink_Report(t *testing.T) {

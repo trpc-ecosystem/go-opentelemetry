@@ -34,9 +34,9 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 
-	"trpc.group/trpc-go/go-opentelemetry/exporter/retry"
-	"trpc.group/trpc-go/go-opentelemetry/pkg/metrics"
-	"trpc.group/trpc-go/go-opentelemetry/sdk/log"
+	"trpc.group/trpc-go/trpc-opentelemetry/exporter/retry"
+	"trpc.group/trpc-go/trpc-opentelemetry/pkg/metrics"
+	"trpc.group/trpc-go/trpc-opentelemetry/sdk/log"
 )
 
 var _ log.Exporter = (*Exporter)(nil)

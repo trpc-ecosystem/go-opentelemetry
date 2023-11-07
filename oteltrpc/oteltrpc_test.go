@@ -23,9 +23,9 @@ import (
 	"trpc.group/trpc-go/trpc-go/plugin"
 	pb "trpc.group/trpc-go/trpc-go/testdata/trpc/helloworld"
 
-	"trpc.group/trpc-go/go-opentelemetry/config"
-	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/consts"
-	ecosystemtrace "trpc.group/trpc-go/go-opentelemetry/sdk/trace"
+	"trpc.group/trpc-go/trpc-opentelemetry/config"
+	"trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/consts"
+	ecosystemtrace "trpc.group/trpc-go/trpc-opentelemetry/sdk/trace"
 )
 
 // language: yaml

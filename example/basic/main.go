@@ -22,11 +22,11 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
+	opentelemetry "trpc.group/trpc-go/trpc-opentelemetry"
 
-	"trpc.group/trpc-go/go-opentelemetry"
-	"trpc.group/trpc-go/go-opentelemetry/api"
-	apilog "trpc.group/trpc-go/go-opentelemetry/api/log"
-	ecotrace "trpc.group/trpc-go/go-opentelemetry/sdk/trace"
+	"trpc.group/trpc-go/trpc-opentelemetry/api"
+	apilog "trpc.group/trpc-go/trpc-opentelemetry/api/log"
+	ecotrace "trpc.group/trpc-go/trpc-opentelemetry/sdk/trace"
 )
 
 var meter = otel.Meter("my_meter")

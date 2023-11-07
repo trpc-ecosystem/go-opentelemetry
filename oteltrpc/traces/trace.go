@@ -26,7 +26,7 @@ import (
 	"trpc.group/trpc-go/trpc-go/log"
 	"trpc.group/trpc-go/trpc-go/plugin"
 
-	"trpc.group/trpc-go/go-opentelemetry/oteltrpc/metrics/prometheus"
+	"trpc.group/trpc-go/trpc-opentelemetry/oteltrpc/metrics/prometheus"
 )
 
 const (
