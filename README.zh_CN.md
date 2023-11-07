@@ -2,7 +2,7 @@
 
 #  Go SDK
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/trpc-ecosystem/go-opentelemetry.svg)](https://pkg.go.dev/github.com/trpc-ecosystem/go-opentelemetry)
+[![Go Reference](https://pkg.go.dev/badge/trpc.group/trpc-go/trpc-opentelemetry.svg)](https://pkg.go.dev/trpc.group/trpc-go/trpc-opentelemetry)
 [![Go Report Card](https://goreportcard.com/badge/trpc.group/trpc-go/trpc-opentelemetry)](https://goreportcard.com/report/trpc.group/trpc-go/trpc-opentelemetry)
 [![LICENSE](https://img.shields.io/badge/license-Apache--2.0-green.svg)](https://github.com/trpc-ecosystem/go-opentelemetry/blob/main/LICENSE)
 [![Releases](https://img.shields.io/github/release/trpc-ecosystem/go-opentelemetry.svg?style=flat-square)](https://github.com/trpc-ecosystem/go-opentelemetry/releases)
