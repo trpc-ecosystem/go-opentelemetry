@@ -141,6 +141,7 @@ func (f factory) Setup(name string, configDec plugin.Decoder) error {
 		SampleError:        cfg.Traces.DeferredSampleError,
 		SampleSlowDuration: cfg.Traces.DeferredSampleSlowDuration,
 	})
+
 	var isHTTPEnabled bool
 	if strings.HasPrefix(cfg.Addr, "http://") || strings.HasPrefix(cfg.Addr, "https://") {
 		isHTTPEnabled = true
