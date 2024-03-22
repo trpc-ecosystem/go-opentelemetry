@@ -32,7 +32,7 @@ import (
 	"trpc.group/trpc-go/trpc-go/log"
 	"trpc.group/trpc-go/trpc-go/plugin"
 
-	"trpc.group/trpc-go/trpc-opentelemetry"
+	opentelemetry "trpc.group/trpc-go/trpc-opentelemetry"
 
 	"trpc.group/trpc-go/trpc-opentelemetry/api"
 	logtps "trpc.group/trpc-go/trpc-opentelemetry/api/log"

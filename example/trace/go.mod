@@ -8,7 +8,7 @@ require (
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.opentelemetry.io/otel/trace v1.16.0
-	trpc.group/trpc-go/trpc-opentelemetry v1.0.0
+	trpc.group/trpc-go/trpc-opentelemetry v1.0.1
 )
 
 require (

@@ -34,7 +34,7 @@ import (
 	"trpc.group/trpc-go/trpc-go/filter"
 	"trpc.group/trpc-go/trpc-go/plugin"
 
-	"trpc.group/trpc-go/trpc-opentelemetry"
+	opentelemetry "trpc.group/trpc-go/trpc-opentelemetry"
 
 	"trpc.group/trpc-go/trpc-opentelemetry/config"
 	"trpc.group/trpc-go/trpc-opentelemetry/config/codes"

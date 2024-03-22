@@ -11,7 +11,7 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v0.39.0
 	go.opentelemetry.io/otel/metric v1.16.0
 	go.opentelemetry.io/otel/sdk/metric v0.39.0
-	trpc.group/trpc-go/trpc-opentelemetry v1.0.0
+	trpc.group/trpc-go/trpc-opentelemetry v1.0.1
 )
 
 require (

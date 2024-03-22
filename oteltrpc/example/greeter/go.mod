@@ -9,7 +9,7 @@ replace (
 
 require (
 	trpc.group/trpc-go/trpc-go v1.0.0
-	trpc.group/trpc-go/trpc-opentelemetry/oteltrpc v1.0.0
+	trpc.group/trpc-go/trpc-opentelemetry/oteltrpc v1.0.1
 )
 
 require (
@@ -88,6 +88,6 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	trpc.group/trpc-go/tnet v0.0.0-20230810071536-9d05338021cf // indirect
-	trpc.group/trpc-go/trpc-opentelemetry v1.0.0 // indirect
+	trpc.group/trpc-go/trpc-opentelemetry v1.0.1 // indirect
 	trpc.group/trpc/trpc-protocol/pb/go/trpc v0.0.0-20230803031059-de4168eb5952 // indirect
 )
