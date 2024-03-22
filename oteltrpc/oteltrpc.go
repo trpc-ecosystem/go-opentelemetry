@@ -61,8 +61,7 @@ func RegisterTextMapSupplier(carrier func(md codec.MetaData, msg codec.Msg) prop
 
 var _ plugin.Factory = (*factory)(nil)
 
-type factory struct {
-}
+type factory struct{}
 
 func (f factory) Type() string {
 	return consts.PluginType
@@ -71,7 +70,8 @@ func (f factory) Type() string {
 func packetSizeMetric() func(ctx context.Context, method string,
 	req, reply interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) error {
 	return func(ctx context.Context, method string, req, reply interface{},
-		cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) error {
+		cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption,
+	) error {
 		switch req := req.(type) {
 		case proto.Message:
 			prometheus.ObserveExportSpansBytes(proto.Size(req))
@@ -89,7 +89,8 @@ var DefaultRecoveryHandler = func(ctx context.Context, panicErr interface{}) err
 
 func recovery() grpc.UnaryClientInterceptor {
 	return func(ctx context.Context, method string, req, reply interface{},
-		cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) (err error) {
+		cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption,
+	) (err error) {
 		defer func() {
 			if rec := recover(); rec != nil {
 				buf := make([]byte, 2048)
@@ -149,6 +150,7 @@ func (f factory) Setup(name string, configDec plugin.Decoder) error {
 		admin.HandleFunc("/debug/tracez", zpage.GetZPageHandlerFunc())
 	}
 	err = opentelemetry.Setup(cfg.Addr,
+		opentelemetry.WithHeader(cfg.Header),
 		opentelemetry.WithTenantID(cfg.TenantID),
 		opentelemetry.WithSampler(DefaultSampler),
 		opentelemetry.WithDeferredSampler(DeferredSampler),
@@ -239,6 +241,7 @@ func buildBatchSpanProcessorOptions(c config.TraceExporterOption) (options []eco
 	}
 	return
 }
+
 func setupCodes(cfg *config.Config, configurator remote.Configurator) {
 	var c []*codes.Code
 	c = append(c, cfg.Codes...)
@@ -315,5 +318,7 @@ func Register() {
 	plugin.Register(consts.PluginName, &factory{})
 }
 
-var ServerFilter = filter.ServerChain{traces.ServerFilter(), prometheus.ServerFilter(), logs.LogRecoveryFilter()}.Filter
-var ClientFilter = filter.ClientChain{traces.ClientFilter(), prometheus.ClientFilter()}.Filter
+var (
+	ServerFilter = filter.ServerChain{traces.ServerFilter(), prometheus.ServerFilter(), logs.LogRecoveryFilter()}.Filter
+	ClientFilter = filter.ClientChain{traces.ClientFilter(), prometheus.ClientFilter()}.Filter
+)
