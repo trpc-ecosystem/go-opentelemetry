@@ -25,14 +25,15 @@ import (
 
 // Config opentelemetry trpc plugin config
 type Config struct {
-	Addr       string        `yaml:"addr"`
-	TenantID   string        `yaml:"tenant_id"`
-	Sampler    SamplerConfig `yaml:"sampler"`
-	Metrics    MetricsConfig `yaml:"metrics"`
-	Logs       LogsConfig    `yaml:"logs"`
-	Traces     TracesConfig  `yaml:"traces"`
-	Codes      []*codes.Code `yaml:"codes"`
-	Attributes []*Attribute  `yaml:"attributes"`
+	Addr       string            `yaml:"addr"`
+	TenantID   string            `yaml:"tenant_id"`
+	Sampler    SamplerConfig     `yaml:"sampler"`
+	Metrics    MetricsConfig     `yaml:"metrics"`
+	Logs       LogsConfig        `yaml:"logs"`
+	Traces     TracesConfig      `yaml:"traces"`
+	Codes      []*codes.Code     `yaml:"codes"`
+	Attributes []*Attribute      `yaml:"attributes"`
+	Headers    map[string]string `yaml:"headers"`
 }
 
 // TracesConfig traces config

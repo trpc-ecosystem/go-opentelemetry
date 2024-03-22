@@ -75,7 +75,8 @@ func Start(ctx context.Context, spanName string, opts ...apitrace.SpanStartOptio
 
 // WithSpan sets up a span with the given name and calls the supplied function.
 func WithSpan(ctx context.Context, spanName string, fn func(ctx context.Context) error,
-	opts ...apitrace.SpanStartOption) error {
+	opts ...apitrace.SpanStartOption,
+) error {
 	ctx, sp := globalTracer.Start(ctx, spanName, opts...)
 	defer sp.End()
 	return fn(ctx)
@@ -95,7 +96,7 @@ func newTraceHTTPExporter(addr string, o *setupOptions) (sdktrace.SpanExporter, 
 	otlpTraceOpts := []otlptracehttp.Option{
 		otlptracehttp.WithEndpoint(addr),
 		otlptracehttp.WithCompression(otlptracehttp.GzipCompression),
-		otlptracehttp.WithHeaders(map[string]string{api.TenantHeaderKey: o.tenantID}),
+		otlptracehttp.WithHeaders(o.otlptraceHeader),
 		otlptracehttp.WithRetry(otlptracehttp.RetryConfig{
 			Enabled:         true,
 			InitialInterval: retry.DefaultConfig.InitialInterval,
@@ -124,7 +125,7 @@ func newTraceGRPCExporter(addr string, o *setupOptions) (sdktrace.SpanExporter, 
 		otlptracegrpc.WithInsecure(),
 		otlptracegrpc.WithEndpoint(addr),
 		otlptracegrpc.WithCompressor("gzip"),
-		otlptracegrpc.WithHeaders(map[string]string{api.TenantHeaderKey: o.tenantID}),
+		otlptracegrpc.WithHeaders(o.otlptraceHeader),
 		otlptracegrpc.WithDialOption(grpc.WithDefaultCallOptions(grpc.MaxCallSendMsgSize(MaxSendMessageSize))),
 		otlptracegrpc.WithRetry(otlptracegrpc.RetryConfig{
 			Enabled:         true,
@@ -218,8 +219,8 @@ func newMetricHTTPExporter(addr string, o *setupOptions) (*sdkmetric.Exporter, e
 	otlpMetricOpts := []otlpmetrichttp.Option{
 		otlpmetrichttp.WithInsecure(),
 		otlpmetrichttp.WithEndpoint(addr),
+		otlpmetrichttp.WithHeaders(o.otlptraceHeader),
 		otlpmetrichttp.WithCompression(otlpmetrichttp.GzipCompression),
-		otlpmetrichttp.WithHeaders(map[string]string{api.TenantHeaderKey: o.tenantID}),
 		otlpmetrichttp.WithRetry(otlpmetrichttp.RetryConfig{
 			Enabled:         true,
 			InitialInterval: retry.DefaultConfig.InitialInterval,
@@ -236,7 +237,7 @@ func newMetricGrpcExporter(addr string, o *setupOptions) (*sdkmetric.Exporter, e
 		otlpmetricgrpc.WithInsecure(),
 		otlpmetricgrpc.WithEndpoint(addr),
 		otlpmetricgrpc.WithCompressor("gzip"),
-		otlpmetricgrpc.WithHeaders(map[string]string{api.TenantHeaderKey: o.tenantID}),
+		otlpmetricgrpc.WithHeaders(o.otlptraceHeader),
 		otlpmetricgrpc.WithDialOption(grpc.WithDefaultCallOptions(grpc.MaxCallSendMsgSize(MaxSendMessageSize))),
 		otlpmetricgrpc.WithRetry(otlpmetricgrpc.RetryConfig{
 			Enabled:         true,
@@ -274,7 +275,7 @@ func setupLog(addr string, o *setupOptions, kvs []attribute.KeyValue) (err error
 		ecosystemotlp.WithAddress(addr),
 		ecosystemotlp.WithTenantID(o.tenantID),
 		ecosystemotlp.WithCompressor("gzip"),
-		ecosystemotlp.WithHeaders(map[string]string{api.TenantHeaderKey: o.tenantID}),
+		ecosystemotlp.WithHeaders(o.otlptraceHeader),
 		ecosystemotlp.WithRetryConfig(retry.DefaultConfig),
 	)
 	if err != nil {
@@ -307,6 +308,7 @@ type setupOptions struct {
 	deferredSampler  trace.DeferredSampler
 	batchSpanOption  []trace.BatchSpanProcessorOption
 	idGenerator      sdktrace.IDGenerator
+	otlptraceHeader  map[string]string
 }
 
 func defaultSetupOptions() *setupOptions {
@@ -315,6 +317,7 @@ func defaultSetupOptions() *setupOptions {
 		sampler:         sdktrace.AlwaysSample(),
 		logEnabled:      false,
 		enabledLogLevel: apilog.InfoLevel,
+		otlptraceHeader: make(map[string]string),
 		deferredSampler: trace.NewDeferredSampler(trace.DeferredSampleConfig{}),
 	}
 }
@@ -343,10 +346,20 @@ func WithServerOwner(owner string) SetupOption {
 	}
 }
 
+// WithHeader with server header
+func WithHeader(header map[string]string) SetupOption {
+	return func(options *setupOptions) {
+		for k, v := range header {
+			options.otlptraceHeader[k] = v
+		}
+	}
+}
+
 // WithTenantID with tenant id
 func WithTenantID(tenantID string) SetupOption {
 	return func(options *setupOptions) {
 		options.tenantID = tenantID
+		options.otlptraceHeader[api.TenantHeaderKey] = tenantID
 	}
 }
 
