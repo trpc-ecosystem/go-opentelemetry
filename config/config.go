@@ -33,7 +33,7 @@ type Config struct {
 	Traces     TracesConfig      `yaml:"traces"`
 	Codes      []*codes.Code     `yaml:"codes"`
 	Attributes []*Attribute      `yaml:"attributes"`
-	Header     map[string]string `yaml:"header"`
+	Headers    map[string]string `yaml:"headers"`
 }
 
 // TracesConfig traces config

@@ -150,7 +150,7 @@ func (f factory) Setup(name string, configDec plugin.Decoder) error {
 		admin.HandleFunc("/debug/tracez", zpage.GetZPageHandlerFunc())
 	}
 	err = opentelemetry.Setup(cfg.Addr,
-		opentelemetry.WithHeader(cfg.Header),
+		opentelemetry.WithHeader(cfg.Headers),
 		opentelemetry.WithTenantID(cfg.TenantID),
 		opentelemetry.WithSampler(DefaultSampler),
 		opentelemetry.WithDeferredSampler(DeferredSampler),
