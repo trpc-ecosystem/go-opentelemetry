@@ -7,7 +7,7 @@ replace trpc.group/trpc-go/trpc-opentelemetry => ../../
 require (
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.uber.org/zap v1.24.0
-	trpc.group/trpc-go/trpc-opentelemetry v1.0.0
+	trpc.group/trpc-go/trpc-opentelemetry v1.0.1
 )
 
 require (

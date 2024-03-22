@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"trpc.group/trpc-go/trpc-opentelemetry"
+	opentelemetry "trpc.group/trpc-go/trpc-opentelemetry"
 	"trpc.group/trpc-go/trpc-opentelemetry/api/log"
 	"trpc.group/trpc-go/trpc-opentelemetry/config/codes"
 	"trpc.group/trpc-go/trpc-opentelemetry/sdk/metric"
