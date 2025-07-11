@@ -163,3 +163,7 @@ func main() {
 ### 2.Use opentelemetry sdk
 
 If the framework used by the business does not implement a reporting plugin similar to trpc-go, you can also directly integrate with the OpenTelemetry SDK. For a reporting demo, please refer to the following: [example](./example)。
+
+## Copyright
+
+The copyright notice pertaining to the Tencent code in this repo was previously in the name of “THL A29 Limited.”  That entity has now been de-registered.  You should treat all previously distributed copies of the code as if the copyright notice was in the name of “Tencent.”
